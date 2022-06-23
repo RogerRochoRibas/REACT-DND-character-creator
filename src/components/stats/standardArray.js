@@ -44,11 +44,11 @@ const StandardArray = () => {
       <h3>CON {state.standardCON}</h3>
       <Select value="standardCON" />
       <h3>INT {state.standardINT}</h3>
-      <Select value="INT" />
+      <Select value="standardINT" />
       <h3>WIS {state.standardWIS}</h3>
-      <Select value="WIS" />
+      <Select value="standardWIS" />
       <h3>CHA {state.standardCHA}</h3>
-      <Select value="CHA" />
+      <Select value="standardCHA" />
     </>
   );
 };
