@@ -4,22 +4,22 @@ import { StatsAppContext } from "./statsProvider";
 const Select = (props) => {
   const [state, setState] = useContext(StatsAppContext);
   const options = ["--","15", "14", "13", "12", "10", "8"];
-  if (state.STR ==="15" || state.DEX === "15" || state.CON === "15" || state.INT === "15" || state.WIS === "15" || state.CHA === "15") {
+  if (state.standardSTR ==="15" || state.standardDEX === "15" || state.standardCON === "15" || state.standardINT === "15" || state.standardWIS === "15" || state.standardCHA === "15") {
     options[1] = "--"
   }
-  if (state.STR ==="14" || state.DEX === "14" || state.CON === "14" || state.INT === "14" || state.WIS === "14" || state.CHA === "14") {
+  if (state.standardSTR ==="14" || state.standardDEX === "14" || state.standardCON === "14" || state.standardINT === "14" || state.standardWIS === "14" || state.standardCHA === "14") {
     options[2] = "--"
   }
-  if (state.STR ==="13" || state.DEX === "13" || state.CON === "13" || state.INT === "13" || state.WIS === "13" || state.CHA === "13") {
+  if (state.standardSTR ==="13" || state.standardDEX === "13" || state.standardCON === "13" || state.standardINT === "13" || state.standardWIS === "13" || state.standardCHA === "13") {
     options[3] = "--"
   }
-  if (state.STR ==="12" || state.DEX === "12" || state.CON === "12" || state.INT === "12" || state.WIS === "12" || state.CHA === "12") {
+  if (state.standardSTR ==="12" || state.standardDEX === "12" || state.standardCON === "12" || state.standardINT === "12" || state.standardWIS === "12" || state.standardCHA === "12") {
     options[4] = "--"
   }
-  if (state.STR ==="10" || state.DEX === "10" || state.CON === "10" || state.INT === "10" || state.WIS === "10" || state.CHA === "10") {
+  if (state.standardSTR ==="10" || state.standardDEX === "10" || state.standardCON === "10" || state.standardINT === "10" || state.standardWIS === "10" || state.standardCHA === "10") {
     options[5] = "--"
   }
-  if (state.STR ==="8" || state.DEX === "8" || state.CON === "8" || state.INT === "8" || state.WIS === "8" || state.CHA === "8") {
+  if (state.standardSTR ==="8" || state.standardDEX === "8" || state.standardCON === "8" || state.standardINT === "8" || state.standardWIS === "8" || state.standardCHA === "8") {
     options[6] = "--"
   }
   return (
@@ -36,18 +36,18 @@ const StandardArray = () => {
 
   return (
     <>
-      <h2>{state.type}</h2>
-      <h3>STR {state.STR}</h3>
-      <Select value="STR" />
-      <h3>DEX {state.DEX}</h3>
-      <Select value="DEX" />
-      <h3>CON {state.CON}</h3>
-      <Select value="CON" />
-      <h3>INT {state.INT}</h3>
+      <h2>{state.statsSystem}</h2>
+      <h3>STR {state.standardSTR}</h3>
+      <Select value="standardSTR" />
+      <h3>DEX {state.standardDEX}</h3>
+      <Select value="standardDEX" />
+      <h3>CON {state.standardCON}</h3>
+      <Select value="standardCON" />
+      <h3>INT {state.standardINT}</h3>
       <Select value="INT" />
-      <h3>WIS {state.WIS}</h3>
+      <h3>WIS {state.standardWIS}</h3>
       <Select value="WIS" />
-      <h3>CHA {state.CHA}</h3>
+      <h3>CHA {state.standardCHA}</h3>
       <Select value="CHA" />
     </>
   );
