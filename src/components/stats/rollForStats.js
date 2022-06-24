@@ -4,83 +4,61 @@ import { StatsAppContext } from "./statsProvider";
 const RollStats = () => {
   const [state, setState] = useContext(StatsAppContext);
   function rollStats() {
-    var dice1 = [
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-    ];
-    var unsortedDice1 = dice1;
-    dice1.sort();
-    var addedDice1 = dice1[1] + dice1[2] + dice1[3];
-
-    var dice2 = [
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-    ];
-    var unsortedDice2 = dice2;
-    dice2.sort();
-    var addedDice2 = dice2[1] + dice2[2] + dice2[3];
-
-    var dice3 = [
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-    ];
-    var unsortedDice3 = dice3;
-    dice3.sort();
-    var addedDice3 = dice3[1] + dice3[2] + dice3[3];
-
-    var dice4 = [
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-    ];
-    var unsortedDice4 = dice4;
-    dice4.sort();
-    var addedDice4 = dice4[1] + dice4[2] + dice4[3];
-
-    var dice5 = [
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-    ];
-    var unsortedDice5 = dice5;
-    dice5.sort();
-    var addedDice5 = dice5[1] + dice5[2] + dice5[3];
-
-    var dice6 = [
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-      Math.floor(Math.random() * 6) + 1,
-    ];
-    var unsortedDice6 = dice6;
-    dice6.sort();
-    var addedDice6 = dice6[1] + dice6[2] + dice6[3];
+    function roll6() {return (Math.floor(Math.random() * 6) + 1)}
+    function rollAndCalculate(iteration) {
+    var iteration = [roll6(),roll6(),roll6(),roll6()]
+    iteration.sort();
+    var addedDice = iteration[1] + iteration[2] + iteration[3];
+    iteration[4] = addedDice;
+    return iteration
+    }
+    var dice1 = rollAndCalculate("One")
+    var dice2 = rollAndCalculate("Two")
+    var dice3 = rollAndCalculate("Three")
+    var dice4 = rollAndCalculate("Four")
+    var dice5 = rollAndCalculate("Five")
+    var dice6 = rollAndCalculate("Six")
 
     setState({
       ...state,
-      roll1: unsortedDice1,
-      total1: addedDice1,
-      roll2: unsortedDice2,
-      total2: addedDice2,
-      roll3: unsortedDice3,
-      total3: addedDice3,
-      roll4: unsortedDice4,
-      total4: addedDice4,
-      roll5: unsortedDice5,
-      total5: addedDice5,
-      roll6: unsortedDice6,
-      total6: addedDice6,
+      total1: dice1[4],
+      roll10: dice1[0],
+      roll11: dice1[1],
+      roll12: dice1[2],
+      roll13: dice1[3],
+
+      total2: dice2[4],
+      roll20: dice2[0],
+      roll21: dice2[1],
+      roll22: dice2[2],
+      roll23: dice2[3],
+
+      total3: dice3[4],
+      roll30: dice3[0],
+      roll31: dice3[1],
+      roll32: dice3[2],
+      roll33: dice3[3],
+      
+      total4: dice4[4],
+      roll40: dice4[0],
+      roll41: dice4[1],
+      roll42: dice4[2],
+      roll43: dice4[3],
+      
+      total5: dice5[4],
+      roll50: dice5[0],
+      roll51: dice5[1],
+      roll52: dice5[2],
+      roll53: dice5[3],
+      
+      total6: dice6[4],
+      roll60: dice6[0],
+      roll61: dice6[1],
+      roll62: dice6[2],
+      roll63: dice6[3],
     });
   }
-  return <button onClick={() => rollStats()}>Roll All Stats</button>;
+  return <button onClick={() => rollStats()}>Roll Stats</button>;
 };
 
 const SelectRolled = (props) => {
@@ -256,12 +234,30 @@ const RollForstats = () => {
       total4: "",
       total5: "",
       total6: "",
-      roll1: ["", "", "", ""],
-      roll2: ["", "", "", ""],
-      roll3: ["", "", "", ""],
-      roll4: ["", "", "", ""],
-      roll5: ["", "", "", ""],
-      roll6: ["", "", "", ""],
+      roll11:"",
+      roll12:"",
+      roll13:"",
+      roll10:"",
+      roll21:"",
+      roll22:"",
+      roll23:"",
+      roll20:"",
+      roll31:"",
+      roll32:"",
+      roll33:"",
+      roll30:"",
+      roll41:"",
+      roll42:"",
+      roll43:"",
+      roll40:"",
+      roll51:"",
+      roll52:"",
+      roll53:"",
+      roll50:"",
+      roll61:"",
+      roll62:"",
+      roll63:"",
+      roll60:"",
     });
   }, []);
   const [state, setState] = useContext(StatsAppContext);
@@ -273,45 +269,45 @@ const RollForstats = () => {
         <RollStats />
         <RollResults
           total={state.total1}
-          roll0={state.roll1[0]}
-          roll1={state.roll1[1]}
-          roll2={state.roll1[2]}
-          roll3={state.roll1[3]}
+          roll0={state.roll10}
+          roll1={state.roll11}
+          roll2={state.roll12}
+          roll3={state.roll13}
         />
         <RollResults
           total={state.total2}
-          roll0={state.roll2[0]}
-          roll1={state.roll2[1]}
-          roll2={state.roll2[2]}
-          roll3={state.roll2[3]}
+          roll0={state.roll20}
+          roll1={state.roll21}
+          roll2={state.roll22}
+          roll3={state.roll23}
         />
         <RollResults
           total={state.total3}
-          roll0={state.roll3[0]}
-          roll1={state.roll3[1]}
-          roll2={state.roll3[2]}
-          roll3={state.roll3[3]}
+          roll0={state.roll30}
+          roll1={state.roll31}
+          roll2={state.roll32}
+          roll3={state.roll33}
         />
         <RollResults
           total={state.total4}
-          roll0={state.roll4[0]}
-          roll1={state.roll4[1]}
-          roll2={state.roll4[2]}
-          roll3={state.roll4[3]}
+          roll0={state.roll40}
+          roll1={state.roll41}
+          roll2={state.roll42}
+          roll3={state.roll43}
         />
         <RollResults
           total={state.total5}
-          roll0={state.roll5[0]}
-          roll1={state.roll5[1]}
-          roll2={state.roll5[2]}
-          roll3={state.roll5[3]}
+          roll0={state.roll50}
+          roll1={state.roll51}
+          roll2={state.roll52}
+          roll3={state.roll53}
         />
         <RollResults
           total={state.total6}
-          roll0={state.roll6[0]}
-          roll1={state.roll6[1]}
-          roll2={state.roll6[2]}
-          roll3={state.roll6[3]}
+          roll0={state.roll60}
+          roll1={state.roll61}
+          roll2={state.roll62}
+          roll3={state.roll63}
         />
         <h3>STR {state.totalSTR}</h3>
         <SelectRolled value="totalSTR" option="STRoption" />

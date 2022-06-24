@@ -3,6 +3,7 @@ import { StatsAppContext } from "./statsProvider";
 import StandardArray from "./standardArray";
 import PointBuy from "./pointBuy";
 import RollForstats from "./rollForStats";
+import SetManually from "./setManually";
 
 const StatsShowstate = () => {
   const [state, setState] = useContext(StatsAppContext);
@@ -13,7 +14,7 @@ const StatsShowstate = () => {
   } else if (state.statsSystem === "Roll for Stats") {
     return <RollForstats />;
   } else if (state.statsSystem === "Set Manually") {
-    return <h2>{state.statsSystem}</h2>;
+    return <SetManually />;
   }
 };
 
