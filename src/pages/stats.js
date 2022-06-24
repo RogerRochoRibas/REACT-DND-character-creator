@@ -1,12 +1,17 @@
 import StatsProvider from '../components/stats/statsProvider';
-import StatsShowstate from '../components/stats/statsShowstate';
 import SystemSelector from '../components/stats/systemSelector';
+import StandardArray from '../components/stats/standardArray';
+import RollForstats from '../components/stats/rollForStats';
+import PointBuy from '../components/stats/pointBuy';
+
 
 const Stats = () => (
   <div>
     <StatsProvider>
       <SystemSelector />
-      <StatsShowstate />
+      <StandardArray />
+      <RollForstats />
+      <PointBuy />
     </StatsProvider>
     </div>
   );

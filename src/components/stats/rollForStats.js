@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { StatsAppContext } from "./statsProvider";
 
-const RollStats = (props) => {
+const RollStats = () => {
   const [state, setState] = useContext(StatsAppContext);
   function rollStats() {
     var dice1 = [
@@ -201,8 +201,40 @@ const SelectRolled = (props) => {
     </select>
   );
 };
-
-const RollForstats = (props) => {
+const RollOneResult = (props) => {
+  return (
+    <div className={"dice" + props.roll}>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div className="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div className="column">
+        <span></span>
+      </div>
+      <div className="column">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  );
+};
+const RollResults = (props) => {
+  return (
+    <div className="diceWrap">
+      <h3>{props.total}</h3>
+      <RollOneResult roll={props.roll0} />
+      <RollOneResult roll={props.roll1} />
+      <RollOneResult roll={props.roll2} />
+      <RollOneResult roll={props.roll3} />
+    </div>
+  );
+};
+const RollForstats = () => {
   useEffect(() => {
     setState({
       ...state,
@@ -234,42 +266,68 @@ const RollForstats = (props) => {
   }, []);
   const [state, setState] = useContext(StatsAppContext);
 
-  return (
-    <>
-      <h2>{state.statsSystem}</h2>
-      <RollStats />
-      <p>
-        {state.total1}: {state.roll1}
-      </p>
-      <p>
-        {state.total2}: {state.roll2}
-      </p>
-      <p>
-        {state.total3}: {state.roll3}
-      </p>
-      <p>
-        {state.total4}: {state.roll4}
-      </p>
-      <p>
-        {state.total5}: {state.roll5}
-      </p>
-      <p>
-        {state.total6}: {state.roll6}
-      </p>
-      <h3>STR {state.totalSTR}</h3>
-      <SelectRolled value="totalSTR" option="STRoption" />
-      <h3>DEX {state.totalDEX}</h3>
-      <SelectRolled value="totalDEX" option="DEXoption" />
-      <h3>CON {state.totalCON}</h3>
-      <SelectRolled value="totalCON" option="CONoption" />
-      <h3>INT {state.totalINT}</h3>
-      <SelectRolled value="totalINT" option="INToption" />
-      <h3>WIS {state.totalWIS}</h3>
-      <SelectRolled value="totalWIS" option="WISoption" />
-      <h3>CHA {state.totalCHA}</h3>
-      <SelectRolled value="totalCHA" option="CHAoption" />
-    </>
-  );
+  if (state.statsSystem === "Roll for Stats") {
+    return (
+      <>
+        <h2>{state.statsSystem}</h2>
+        <RollStats />
+        <RollResults
+          total={state.total1}
+          roll0={state.roll1[0]}
+          roll1={state.roll1[1]}
+          roll2={state.roll1[2]}
+          roll3={state.roll1[3]}
+        />
+        <RollResults
+          total={state.total2}
+          roll0={state.roll2[0]}
+          roll1={state.roll2[1]}
+          roll2={state.roll2[2]}
+          roll3={state.roll2[3]}
+        />
+        <RollResults
+          total={state.total3}
+          roll0={state.roll3[0]}
+          roll1={state.roll3[1]}
+          roll2={state.roll3[2]}
+          roll3={state.roll3[3]}
+        />
+        <RollResults
+          total={state.total4}
+          roll0={state.roll4[0]}
+          roll1={state.roll4[1]}
+          roll2={state.roll4[2]}
+          roll3={state.roll4[3]}
+        />
+        <RollResults
+          total={state.total5}
+          roll0={state.roll5[0]}
+          roll1={state.roll5[1]}
+          roll2={state.roll5[2]}
+          roll3={state.roll5[3]}
+        />
+        <RollResults
+          total={state.total6}
+          roll0={state.roll6[0]}
+          roll1={state.roll6[1]}
+          roll2={state.roll6[2]}
+          roll3={state.roll6[3]}
+        />
+        <h3>STR {state.totalSTR}</h3>
+        <SelectRolled value="totalSTR" option="STRoption" />
+        <h3>DEX {state.totalDEX}</h3>
+        <SelectRolled value="totalDEX" option="DEXoption" />
+        <h3>CON {state.totalCON}</h3>
+        <SelectRolled value="totalCON" option="CONoption" />
+        <h3>INT {state.totalINT}</h3>
+        <SelectRolled value="totalINT" option="INToption" />
+        <h3>WIS {state.totalWIS}</h3>
+        <SelectRolled value="totalWIS" option="WISoption" />
+        <h3>CHA {state.totalCHA}</h3>
+        <SelectRolled value="totalCHA" option="CHAoption" />
+      </>
+    );
+  }
 };
 
 export default RollForstats;

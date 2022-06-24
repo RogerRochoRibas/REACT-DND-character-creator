@@ -1,0 +1,95 @@
+/* Multiple Dice*/
+.dice1,
+.dice2,
+.dice3,
+.dice4,
+.dice5,
+.dice6 {
+  padding: 6px;
+  background-color: tomato;
+  width: 64px;
+  height: 64px;
+  border-radius: 10%;
+  margin: 3px;
+}
+
+.dice1 > span:nth-child(1),
+.dice2 > span:nth-child(2),
+.dice2 > span:nth-child(1),
+.dice3 > span:nth-child(2),
+.dice3 > span:nth-child(3),
+.dice3 > span:nth-child(1),
+.dice4 > .column > span,
+.dice5 > .column > span,
+.dice6 > .column > span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+.dice1,
+.dice2,
+.dice3,
+.dice4,
+.dice5,
+.dice6 {
+  display: flex;
+  justify-content: space-between;
+}
+/* Dice 1*/
+.dice1 {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dice 2*/
+.dice2 > span:nth-child(2) {
+  align-self: flex-end;
+}
+.dice2 > span:nth-child(5),
+.dice2 > span:nth-child(4),
+.dice2 > span:nth-child(3),
+.dice2 > span:nth-child(6),
+.dice2 > .column {
+  display: none;
+}
+
+/* Dice 3*/
+.dice3 > span:nth-child(3) {
+  align-self: flex-end;
+}
+.dice3 > span:nth-child(2) {
+  align-self: center;
+}
+
+/* Dice 4, 5 & 6*/
+.dice4 > .column,
+.dice5 > .column,
+.dice6 > .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dice4 > span:nth-child(1),
+.dice4 > span:nth-child(2),
+.dice4 > span:nth-child(3),
+.dice4 > .column > span:nth-child(2),
+.dice5 > .column > span:nth-child(2),
+.dice6 > span:nth-child(1),
+.dice6 > span:nth-child(2),
+.dice6 > span:nth-child(3),
+.dice4 > .column:nth-child(5),
+.dice6 > .column:nth-child(5) {
+  display: none;
+}
+.dice5 > .column:nth-child(5) {
+  justify-content: center;
+}
+.diceWrap {
+    display:flex
+}
+.diceWrap > div:nth-child(2) {
+    background-color: grey;
+}

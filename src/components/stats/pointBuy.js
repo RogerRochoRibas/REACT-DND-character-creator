@@ -52,7 +52,7 @@ const Modify = (props) => {
           currentValues.pointbuySTR = newValue;
         }
       }
-    }    
+    }
     if (value === "pointbuyDEX") {
       let oldValueDEX = Number(state[value]);
       if (changer === "-") {
@@ -61,7 +61,7 @@ const Modify = (props) => {
           currentValues.pointbuyDEX = newValue;
         }
       }
-      if (changer=== "+") {
+      if (changer === "+") {
         if (oldValueDEX < 15) {
           let newValue = oldValueDEX + 1;
           currentValues.pointbuyDEX = newValue;
@@ -77,14 +77,14 @@ const Modify = (props) => {
           currentValues.pointbuyCON = newValue;
         }
       }
-      if (changer=== "+") {
+      if (changer === "+") {
         if (oldValueCON < 15) {
           let newValue = oldValueCON + 1;
           currentValues.pointbuyCON = newValue;
         }
       }
     }
-    
+
     if (value === "pointbuyINT") {
       let oldValueINT = Number(state[value]);
       if (changer === "-") {
@@ -93,14 +93,14 @@ const Modify = (props) => {
           currentValues.pointbuyINT = newValue;
         }
       }
-      if (changer=== "+") {
+      if (changer === "+") {
         if (oldValueINT < 15) {
           let newValue = oldValueINT + 1;
           currentValues.pointbuyINT = newValue;
         }
       }
     }
-    
+
     if (value === "pointbuyWIS") {
       let oldValueWIS = Number(state[value]);
       if (changer === "-") {
@@ -109,14 +109,14 @@ const Modify = (props) => {
           currentValues.pointbuyWIS = newValue;
         }
       }
-      if (changer=== "+") {
+      if (changer === "+") {
         if (oldValueWIS < 15) {
           let newValue = oldValueWIS + 1;
           currentValues.pointbuyWIS = newValue;
         }
       }
     }
-    
+
     if (value === "pointbuyCHA") {
       let oldValueCHA = Number(state[value]);
       if (changer === "-") {
@@ -125,7 +125,7 @@ const Modify = (props) => {
           currentValues.pointbuyCHA = newValue;
         }
       }
-      if (changer=== "+") {
+      if (changer === "+") {
         if (oldValueCHA < 15) {
           let newValue = oldValueCHA + 1;
           currentValues.pointbuyCHA = newValue;
@@ -218,24 +218,26 @@ const Modify = (props) => {
 const PointBuy = () => {
   const [state, setState] = useContext(StatsAppContext);
 
-  return (
-    <>
-      <h2>{state.statsSystem}</h2>
-      <p>Points: {state.Points}</p>
-      <h3>STR {state.pointbuySTR}</h3>
-      <Modify value="pointbuySTR" />
-      <h3>DEX {state.pointbuyDEX}</h3>
-      <Modify value="pointbuyDEX" />
-      <h3>CON {state.pointbuyCON}</h3>
-      <Modify value="pointbuyCON" />
-      <h3>INT {state.pointbuyINT}</h3>
-      <Modify value="pointbuyINT" />
-      <h3>WIS {state.pointbuyWIS}</h3>
-      <Modify value="pointbuyWIS" />
-      <h3>CHA {state.pointbuyCHA}</h3>
-      <Modify value="pointbuyCHA" />
-    </>
-  );
+  if (state.statsSystem === "Point Buy") {
+    return (
+      <>
+        <h2>{state.statsSystem}</h2>
+        <p>Points: {state.Points}</p>
+        <h3>STR {state.pointbuySTR}</h3>
+        <Modify value="pointbuySTR" />
+        <h3>DEX {state.pointbuyDEX}</h3>
+        <Modify value="pointbuyDEX" />
+        <h3>CON {state.pointbuyCON}</h3>
+        <Modify value="pointbuyCON" />
+        <h3>INT {state.pointbuyINT}</h3>
+        <Modify value="pointbuyINT" />
+        <h3>WIS {state.pointbuyWIS}</h3>
+        <Modify value="pointbuyWIS" />
+        <h3>CHA {state.pointbuyCHA}</h3>
+        <Modify value="pointbuyCHA" />
+      </>
+    );
+  }
 };
 
 export default PointBuy;
