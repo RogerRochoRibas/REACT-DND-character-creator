@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ClassAppContext } from "./classProvider";
 import SubclassShowcase from "./subclassShowcase";
+import ClassChoices from "./classChoices";
 
 const ClassShowcase = () => {
   const [state, setState] = useContext(ClassAppContext);
@@ -12,7 +13,7 @@ const ClassShowcase = () => {
     var difficulty = "Low";
     var abilityTitle1 = "More Extra Attacks";
     var abilityDesc1 =
-      "Extra attack lets you Attack twice on the same turn. All martial classes get Extra Attack at level 5, but only fighters get it again at level 11 and 20. This makes them capable of 4 attack actions in one turn.";
+      "Extra attack lets you Attack twice on the same turn. All martial classes get Extra Attack at level 5, but only fighters get it again at level 11 and 20. This makes them capable of up to 4 attack actions in one turn.";
     var abilityTitle2 = "Action Surge";
     var abilityDesc2 =
       'From level 2 onwards Fighters can Action Surge once a day, this allows them to take action twice in a single turn. The perfect skill for the "do ir die" moment.';
@@ -20,8 +21,8 @@ const ClassShowcase = () => {
     var subclassGeneralExplain =
       "Fighter Subclasses have a great impact on the way you play them, from a nimble archer raining arrows on the enemy, to a heavy knight protecting his allies, they can even add magic to their toolkit.";
     var choseSubclass =
-      "You will not chose a Subclass until level 3, regardless, it is a good idea to create your character with some idea of what is to come.";
-    }
+      "Even if Fighters don't get to chose a Subclass until level 3, this may help you decide how do you wanna build your character.";
+  }
   return (
     <div>
       <h2>{state.chosenClass}</h2>
@@ -46,6 +47,7 @@ const ClassShowcase = () => {
         <p>{subclassGeneralExplain}</p>
         <p>{choseSubclass}</p>
         <SubclassShowcase />
+        <ClassChoices />
       </div>
     </div>
   );

@@ -51,7 +51,7 @@ const SubclassShowcase = () => {
           "Samurai can call on Fighting Spirit several times a day to enhance their precission and defense for one turn. The perfect match for Action Surge.",
       },
     ];
-  }
+  } else { var subclasses = []}
   let subclassesMounted = subclasses.map((element) => {
     return (
       <div className="subclassSection">
