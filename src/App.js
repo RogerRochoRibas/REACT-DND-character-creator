@@ -3,7 +3,7 @@ import Stats from "./pages/stats";
 import Class from "./pages/class&name";
 
 const App = () => (
-  <Router>
+  <Router className="App">
     <Routes>
       <Route path="/" element={<Class />}></Route>
       <Route path="/stats" element={<Stats />}></Route>

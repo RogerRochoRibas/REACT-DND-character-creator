@@ -11,7 +11,7 @@ const ClassSelector = () => {
   }, []);
 
   return (
-    <form>
+    <div>
       <input
         type="radio"
         id="Fighter"
@@ -132,7 +132,7 @@ const ClassSelector = () => {
         }}
       />
       <label htmlFor="Wizard">Wizard</label>
-    </form>
+    </div>
   );
 };
 
