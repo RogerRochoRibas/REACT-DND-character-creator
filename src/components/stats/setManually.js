@@ -6,60 +6,80 @@ const SetManually = () => {
   useEffect(() => {
     setState({
       ...state,
-      manualSTR: 10,
-      manualDEX: 10,
-      manualCON: 10,
-      manualINT: 10,
-      manualWIS: 10,
-      manualCHA: 10,
+      manualSTR: "",
+      manualDEX: "",
+      manualCON: "",
+      manualINT: "",
+      manualWIS: "",
+      manualCHA: "",
     });
   }, []);
 
   if (state.statsSystem === "Set Manually") {
     return (
       <>
-        <h3>STR {state.manualSTR}</h3>
-        <input
+        <h3>
+          STR{"  "}
+          <input
+            className="manualInput"
+            type="number"
+            onChange={(e) => {
+              setState({ ...state, manualSTR: e.target.value });
+            }}
+          />
+        </h3>
+
+        <h3>
+          DEX{" "}
+          <input
+            type="number"
+            className="manualInput"
+            onChange={(e) => {
+              setState({ ...state, manualDEX: e.target.value });
+            }}
+          />
+        </h3>
+
+        <h3>
+          CON{" "}
+          <input
+            type="number"
+            className="manualInput"
+            onChange={(e) => {
+              setState({ ...state, manualCON: e.target.value });
+            }}
+          />
+        </h3>
+
+        <h3>INT <input
           type="number"
-          onChange={(e) => {
-            setState({ ...state, manualSTR: e.target.value });
-          }}
-        />
-        <h3>DEX {state.manualDEX}</h3>
-        <input
-          type="number"
-          onChange={(e) => {
-            setState({ ...state, manualDEX: e.target.value });
-          }}
-        />
-        <h3>CON {state.manualCON}</h3>
-        <input
-          type="number"
-          onChange={(e) => {
-            setState({ ...state, manualCON: e.target.value });
-          }}
-        />
-        <h3>INT {state.manualINT}</h3>
-        <input
-          type="number"
+          className="manualInput"
           onChange={(e) => {
             setState({ ...state, manualINT: e.target.value });
           }}
-        />
-        <h3>WIS {state.manualWIS}</h3>
-        <input
-          type="number"
-          onChange={(e) => {
-            setState({ ...state, manualWIS: e.target.value });
-          }}
-        />
-        <h3>CHA {state.manualCHA}</h3>
-        <input
-          type="number"
-          onChange={(e) => {
-            setState({ ...state, manualCHA: e.target.value });
-          }}
-        />
+        /></h3>
+        
+        <h3>
+          WIS{" "}
+          <input
+            type="number"
+            className="manualInput"
+            onChange={(e) => {
+              setState({ ...state, manualWIS: e.target.value });
+            }}
+          />
+        </h3>
+
+        <h3>
+          CHA{" "}
+          <input
+            type="number"
+            className="manualInput"
+            onChange={(e) => {
+              setState({ ...state, manualCHA: e.target.value });
+            }}
+          />
+        </h3>
       </>
     );
   }
