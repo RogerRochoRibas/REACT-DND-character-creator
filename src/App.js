@@ -1,24 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Provider from "./Provider";
-import ShowState from "./Showstate";
-import Login from "./Login";
 import Stats from "./pages/stats";
+import Class from "./pages/class&name";
 
 const App = () => (
   <Router>
     <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <Stats />
-            <Provider>
-              <Login />
-              <ShowState />
-            </Provider>
-          </>
-        }
-      ></Route>
+      <Route path="/" element={<Class />}></Route>
+      <Route path="/stats" element={<Stats />}></Route>
     </Routes>
   </Router>
 );
