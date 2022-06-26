@@ -4,9 +4,9 @@ import StandardArray from "../components/stats/standardArray";
 import RollForstats from "../components/stats/rollForStats";
 import PointBuy from "../components/stats/pointBuy";
 import SetManually from "../components/stats/setManually";
+import ChangePage from "../components/changePage";
 
 const Stats = () => {
-  
   return (
     <div>
       <StatsProvider>
@@ -15,6 +15,7 @@ const Stats = () => {
         <RollForstats />
         <PointBuy />
         <SetManually />
+        <ChangePage />
       </StatsProvider>
     </div>
   );

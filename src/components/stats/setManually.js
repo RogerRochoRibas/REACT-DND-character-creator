@@ -12,6 +12,7 @@ const SetManually = () => {
       manualINT: "",
       manualWIS: "",
       manualCHA: "",
+      statsSystem: "Standard Array"
     });
   }, []);
 

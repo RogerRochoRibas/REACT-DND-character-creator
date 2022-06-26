@@ -3,9 +3,6 @@ import { StatsAppContext } from './statsProvider'
 
 const SystemSelector = () =>{
     const [state,setState] = useContext(StatsAppContext);
-    useEffect(() => {
-      setState({ ...state, statsSystem:"Standard Array"})
-    }, []);
   
     return( <form>
       <input type="radio" id="Standard Array" name="stats_system" value="Standard Array" onChange={ (e) => {setState({ ...state, statsSystem:e.target.value})}} />
