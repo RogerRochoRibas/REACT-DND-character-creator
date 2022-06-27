@@ -3,13 +3,13 @@ import { RaceAppContext } from "./raceProvider";
 
 const RaceShowcase = () => {
   const [state, setState] = useContext(RaceAppContext);
-var strText = ""
-var dexText = ""
-var conText = ""
-var intText = ""
-var wisText = ""
-var chaText = ""
-var freeStatText = ""
+  var strText = "";
+  var dexText = "";
+  var conText = "";
+  var intText = "";
+  var wisText = "";
+  var chaText = "";
+  var freeStatText = "";
 
   if (state.str > 0) {
     strText = "Str +" + [state.str];
@@ -61,13 +61,38 @@ var freeStatText = ""
     freeStatText = "";
   }
   return (
-    <div>
+    <div className="classFeatures">
       <h2>{state.race}</h2>
       <p>
-        Ability Scores: {strText} {dexText} {conText} {intText} {wisText}{" "}
-        {chaText} {freeStatText}
+        <span>Ability Scores:</span>
+        <span>
+          {strText} {dexText} {conText} {intText} {wisText}
+          {chaText} {freeStatText}
+        </span>
       </p>
-      <p>Size: {state.volume}</p>
+      <p>
+        <span>Size:</span> <span>{state.volume}</span>
+      </p>
+      <p>
+        <span>{state.feature1}</span>
+        <span>{state.feature1text}</span>
+      </p>
+      <p>
+        <span>{state.feature2}</span>
+        <span>{state.feature2text}</span>
+      </p>
+      <p>
+        <span>{state.feature3}</span>
+        <span>{state.feature3text}</span>
+      </p>
+      <p>
+        <span>{state.feature4}</span>
+        <span>{state.feature4text}</span>
+      </p>
+      <p>
+        <span>{state.feature5}</span>
+        <span>{state.feature5text}</span>
+      </p>
     </div>
   );
 };
