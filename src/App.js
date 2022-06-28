@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Stats from "./pages/stats";
 import Class from "./pages/class&name";
 import Race from "./pages/race";
+import Background from "./pages/background";
 
 const App = () => (
     <Router className="App">
@@ -9,6 +10,7 @@ const App = () => (
         <Route path="/" element={<Class />}></Route>
         <Route path="/stats" element={<Stats />}></Route>
         <Route path="/race" element={<Race />}></Route>
+        <Route path="/background" element={<Background />}></Route>
       </Routes>
     </Router>
 );

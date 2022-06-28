@@ -12,7 +12,7 @@ const ClassShowcase = () => {
     var explanation =
       "Fighters are artisans of war. They are proficient with all types of armor, shields, and every simple and martial weapon in the game. A fighter can be anything from a heavily armored frontline tank to a quick and nimble archer.";
     var difficulty = "Low";
-    var abilityTitle1 = "More Extra Attacks";
+    var abilityTitle1 = "More Attacks";
     var abilityDesc1 =
       "Extra attack lets you Attack twice on the same turn. All martial classes get Extra Attack at level 5, but only fighters get it again at level 11 and 20. This makes them capable of up to 4 attack actions in one turn.";
     var abilityTitle2 = "Action Surge";
@@ -22,7 +22,7 @@ const ClassShowcase = () => {
     var subclassGeneralExplain =
       "Fighter Subclasses have a great impact on the way you play them, from a nimble archer raining arrows on the enemy, to a heavy knight protecting his allies, they can even add magic to their toolkit.";
     var choseSubclass =
-      "Even if Fighters don't get to chose a Subclass until level 3, this may help you decide how do you wanna build your character.";
+      "";
   }
   return (
     <div>

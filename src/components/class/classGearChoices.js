@@ -3,8 +3,9 @@ import { ClassAppContext } from "./classProvider";
 
 const ClassGearChoices = () => {
   const [state, setState] = useContext(ClassAppContext);
+  var gearOptions = []
   if (state.chosenClass === "Fighter") {
-    var gearOptions = [
+    gearOptions = [
       {
         option1: "Chain Mail",
         option2: "Leather armor, longbow and 20 arrows",
@@ -14,7 +15,7 @@ const ClassGearChoices = () => {
       { option1: "Dungeoneer's pack", option2: "Explorer's pack" },
     ];
   } else {
-    var gearOptions = [];
+    gearOptions = [];
   }
   let gearOptionsMounted = gearOptions.map((element, choice) => {
     return (
