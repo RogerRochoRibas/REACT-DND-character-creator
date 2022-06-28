@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { ClassAppContext } from "./classProvider";
 import SubclassShowcase from "./subclassShowcase";
-import ClassChoices from "./classChoices";
+import ClassGearChoices from "./classGearChoices";
+import ClassProfChoices from "./classProfChoices";
 
 const ClassShowcase = () => {
   const [state, setState] = useContext(ClassAppContext);
@@ -47,7 +48,11 @@ const ClassShowcase = () => {
         <p>{subclassGeneralExplain}</p>
         <p>{choseSubclass}</p>
         <SubclassShowcase />
-        <ClassChoices />
+        <h3>Class Choices:</h3>
+        <h4>Proficiencies</h4>
+        <ClassProfChoices />
+        <h4>Starting Gear</h4>
+        <ClassGearChoices />
       </div>
     </div>
   );

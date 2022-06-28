@@ -3,32 +3,74 @@ import { ClassAppContext } from "./classProvider";
 
 const ClassSelector = () => {
   const [state, setState] = useContext(ClassAppContext);
-  let ClassList = ["Fighter", "Barbarian", "Monk", "Rogue", "Ranger", "Paladin", "Bard", "Cleric", "Druid", "Sorcerer", "Warlock", "Wizard"]
+  let ClassList = [
+    "Fighter",
+    "Barbarian",
+    "Monk",
+    "Rogue",
+    "Ranger",
+    "Paladin",
+    "Bard",
+    "Cleric",
+    "Druid",
+    "Sorcerer",
+    "Warlock",
+    "Wizard",
+  ];
   useEffect(() => {
     let random = Math.floor(Math.random() * ClassList.length);
-    let randomClass = ClassList[random]
+    let randomClass = ClassList[random];
     setState({ ...state, chosenClass: randomClass });
   }, []);
 
-  let classesMounted = ClassList.map((element,key) => {
+  let classesMounted = ClassList.map((element, key) => {
     return (
       <div>
         <input
-        key={key}
+          key={key}
           type="radio"
           id={element}
           name="chosen_class"
           value={element}
           onChange={(e) => {
-            setState({ ...state, chosenClass: e.target.value });
+            changeClass(e.target.value);
           }}
         />
         <label htmlFor={element}>{element}</label>
       </div>
     );
   });
+  function changeClass(currentClass) {
+    if (currentClass === "Fighter") {
+      setState({
+        ...state,
+        chosenClass: "Fighter",
+        hitPoints: 10,
+        armorProf: ["Light Armor", "Medium Armor", "Heavy Armor"],
+        weaponProf: ["Simple Weapons", "Martial Weapons"],
+        tools: false,
+        skillProf: [
+          "--",
+          "Acrobatics",
+          "Animal Handling",
+          "Athletics",
+          "History",
+          "Insight",
+          "Intimidation",
+          "Perception",
+          "Survival",
+        ],
+        skillNumber: 2,
+        saveSTR: true,
+        saveDEX: false,
+        saveCON: true,
+        saveINT: false,
+        saveWIS: false,
+        saveCHA: false,
+      });
+    }
+  }
   return classesMounted;
-
 };
 
 export default ClassSelector;
