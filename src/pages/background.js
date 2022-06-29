@@ -7,9 +7,9 @@ const Background = () => {
   return (
     <div>
       <BackgroundProvider>
+        <ChangePage />
         <BackgroundSelector />
         <BackgroundShowcase />
-        <ChangePage />
       </BackgroundProvider>
     </div>
   );

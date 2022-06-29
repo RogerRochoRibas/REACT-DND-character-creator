@@ -8,10 +8,10 @@ const Class = () => {
   return (
     <div>
       <ClassProvider>
+        <ChangePage />
         <NameInput />
         <ClassSelector />
         <ClassShowcase />
-        <ChangePage />
       </ClassProvider>
     </div>
   );

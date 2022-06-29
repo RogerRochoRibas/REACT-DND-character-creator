@@ -111,24 +111,20 @@ const RaceSelector = () => {
     "Yuan-Ti",
     "Yuan-Ti Pureblood",
   ];
-  let racesMounted = raceList.map((element) => {
-    return (
-      <div>
-        <input
-          type="radio"
-          id={element}
-          name="chosen_race"
-          value={element}
-          onChange={(e) => {
-            changeStats(e.target.value);
-          }}
-        />
-        <label htmlFor={element}>{element}</label>
-      </div>
-    );
-  });
 
-  function changeStats(race) {
+  return (
+    <select
+      onChange={(e) => {
+            changeChosenRace(e.target.value);
+          }}
+    >
+      {raceList.map((x, y) => (
+        <option key={y}>{x}</option>
+      ))}
+    </select>
+  );
+
+  function changeChosenRace(race) {
     if (race === "Aaracokra") {
       setState({
         ...state,
@@ -4211,7 +4207,6 @@ const RaceSelector = () => {
       });
     }
   }
-  return racesMounted;
 };
 
 export default RaceSelector;

@@ -10,12 +10,12 @@ const Stats = () => {
   return (
     <div>
       <StatsProvider>
+        <ChangePage />
         <SystemSelector />
         <StandardArray />
         <RollForstats />
         <PointBuy />
         <SetManually />
-        <ChangePage />
       </StatsProvider>
     </div>
   );

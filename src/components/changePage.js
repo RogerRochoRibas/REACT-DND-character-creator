@@ -15,6 +15,9 @@ const ChangePage = (props) => {
       <Link to="/background">
         <button>Background</button>
       </Link>
+      <Link to="/CharacterSheet">
+        <button>Character Sheet</button>
+      </Link>
     </div>
   );
 };

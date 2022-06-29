@@ -5,11 +5,13 @@ import RaceShowcase from "../components/race/raceShowcase";
 
 const Race = () => {
   return (
-    <div  className="raceSelector">
+    <div className="raceSelector">
       <RaceProvider>
-        <RaceSelector />
-        <RaceShowcase />
         <ChangePage />
+        <div className="raceList">
+          <RaceSelector />
+        </div>
+        <RaceShowcase />
       </RaceProvider>
     </div>
   );
