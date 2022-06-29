@@ -4,6 +4,7 @@ import { RaceAppContext } from "./raceProvider";
 const RaceSelector = () => {
   const [state, setState] = useContext(RaceAppContext);
   var raceList = [
+    "",
     "Aaracokra",
     "Fallen Aasimar",
     "Protector Aasimar",
