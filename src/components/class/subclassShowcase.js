@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ClassAppContext } from "./classProvider";
+import { AppContext } from "../../appProvider";
 
 const SubclassShowcase = () => {
-  const [state, setState] = useContext(ClassAppContext);
+  const [state, setState] = useContext(AppContext);
   if (state.chosenClass === "Sorcerer") {
     var subclasses = [
       {

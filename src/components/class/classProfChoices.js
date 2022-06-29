@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ClassAppContext } from "./classProvider";
+import { AppContext } from "../../appProvider";
 
 const ClassProfChoices = () => {
-  const [state, setState] = useContext(ClassAppContext);
+  const [state, setState] = useContext(AppContext);
 
   return (
     <>

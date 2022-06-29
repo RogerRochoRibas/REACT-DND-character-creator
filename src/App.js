@@ -4,8 +4,10 @@ import Class from "./pages/class&name";
 import Race from "./pages/race";
 import Background from "./pages/background";
 import CharacterSheet from "./pages/characterSheet";
+import AppProvider from "./appProvider";
 
 const App = () => (
+  <AppProvider>
     <Router className="App">
       <Routes>
         <Route path="/" element={<Class />}></Route>
@@ -15,6 +17,7 @@ const App = () => (
         <Route path="/charactersheet" element={<CharacterSheet />}></Route>
       </Routes>
     </Router>
+  </AppProvider>
 );
 
 export default App;

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { RaceAppContext } from "./raceProvider";
+import { AppContext } from "../../appProvider";
 
 const RaceShowcase = () => {
-  const [state, setState] = useContext(RaceAppContext);
+  const [state, setState] = useContext(AppContext);
   var strText = "";
   var dexText = "";
   var conText = "";

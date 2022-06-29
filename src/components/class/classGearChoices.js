@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { ClassAppContext } from "./classProvider";
+import { AppContext } from "../../appProvider";
 
 const ClassGearChoices = () => {
-  const [state, setState] = useContext(ClassAppContext);
+  const [state, setState] = useContext(AppContext);
   var gearOptions = []
   if (state.chosenClass === "Fighter") {
     gearOptions = [

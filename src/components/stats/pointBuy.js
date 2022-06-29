@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import { StatsAppContext } from "./statsProvider";
+import { AppContext } from "../../appProvider";
 
 const Modify = (props) => {
-  const [state, setState] = useContext(StatsAppContext);
+  const [state, setState] = useContext(AppContext);
   useEffect(() => {
     setState({
       ...state,
@@ -216,7 +216,7 @@ const Modify = (props) => {
 };
 
 const PointBuy = () => {
-  const [state, setState] = useContext(StatsAppContext);
+  const [state, setState] = useContext(AppContext);
 
   if (state.statsSystem === "Point Buy") {
     return (

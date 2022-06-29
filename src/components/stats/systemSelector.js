@@ -1,8 +1,8 @@
 import {useContext,useEffect} from 'react';
-import { StatsAppContext } from './statsProvider'
+import { AppContext } from "../../appProvider";
 
 const SystemSelector = () =>{
-    const [state,setState] = useContext(StatsAppContext);
+    const [state,setState] = useContext(AppContext);
   
     return( <form>
       <input type="radio" id="Standard Array" name="stats_system" value="Standard Array" onChange={ (e) => {setState({ ...state, statsSystem:e.target.value})}} />

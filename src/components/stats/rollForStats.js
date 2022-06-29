@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import { StatsAppContext } from "./statsProvider";
+import { AppContext } from "../../appProvider";
 
 const RollStats = () => {
-  const [state, setState] = useContext(StatsAppContext);
+  const [state, setState] = useContext(AppContext);
   function rollStats() {
     function roll6() {return (Math.floor(Math.random() * 6) + 1)}
     function rollAndCalculate(iteration) {
@@ -62,7 +62,7 @@ const RollStats = () => {
 };
 
 const SelectRolled = (props) => {
-  const [state, setState] = useContext(StatsAppContext);
+  const [state, setState] = useContext(AppContext);
   const options = [
     "--",
     state.total1,
@@ -260,7 +260,7 @@ const RollForstats = () => {
       roll60:"",
     });
   }, []);
-  const [state, setState] = useContext(StatsAppContext);
+  const [state, setState] = useContext(AppContext);
 
   if (state.statsSystem === "Roll for Stats") {
     return (

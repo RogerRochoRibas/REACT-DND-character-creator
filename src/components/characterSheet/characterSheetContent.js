@@ -1,8 +1,8 @@
-import { CharacterSheetAppContext } from "./characterSheetProvider";
 import { useContext } from "react";
+import { AppContext } from "../../appProvider";
 
 const CharacterSheetContent = () => {
-  const [state, setState] = useContext(CharacterSheetAppContext);
+  const [state, setState] = useContext(AppContext);
   return (
     <form className="charsheet">
       <header>

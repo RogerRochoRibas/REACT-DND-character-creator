@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { ClassAppContext } from "./classProvider";
+import { AppContext } from "../../appProvider";
 import SubclassShowcase from "./subclassShowcase";
 import ClassGearChoices from "./classGearChoices";
 import ClassProfChoices from "./classProfChoices";
 
 const ClassShowcase = () => {
-  const [state, setState] = useContext(ClassAppContext);
+  const [state, setState] = useContext(AppContext);
   if (state.chosenClass === "Fighter") {
     var mainStat = "Strength or Dexterity";
     var subtitle = "Master of the Battlefield";

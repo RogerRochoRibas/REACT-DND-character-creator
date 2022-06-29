@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import { ClassAppContext } from "./classProvider";
+import { AppContext } from "../../appProvider";
 
 const ClassSelector = () => {
-  const [state, setState] = useContext(ClassAppContext);
+  const [state, setState] = useContext(AppContext);
   let ClassList = [
     "Fighter",
     "Barbarian",

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { StatsAppContext } from "./statsProvider";
+import { AppContext } from "../../appProvider";
 
 const Select = (props) => {
-  const [state, setState] = useContext(StatsAppContext);
+  const [state, setState] = useContext(AppContext);
   const options = ["--", "15", "14", "13", "12", "10", "8"];
   if (
     state.standardSTR === "15" ||
@@ -78,7 +78,7 @@ const Select = (props) => {
 };
 
 const StandardArray = () => {
-  const [state, setState] = useContext(StatsAppContext);
+  const [state, setState] = useContext(AppContext);
 
   if (state.statsSystem === "Standard Array") {
     return (

@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import { StatsAppContext } from "./statsProvider";
+import { AppContext } from "../../appProvider";
 
 const SetManually = () => {
-  const [state, setState] = useContext(StatsAppContext);
+  const [state, setState] = useContext(AppContext);
   useEffect(() => {
     setState({
       ...state,

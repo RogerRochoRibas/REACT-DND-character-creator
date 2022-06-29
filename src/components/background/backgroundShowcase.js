@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { BackgroundAppContext } from "./backgroundProvider";
+import { AppContext } from "../../appProvider";
 
 const BackgroundShowcase = () => {
-  const [state, setState] = useContext(BackgroundAppContext);
+  const [state, setState] = useContext(AppContext);
   let chosenBackground = "";
   let backgroundProf = "";
   let backgroundProf2 = "";
