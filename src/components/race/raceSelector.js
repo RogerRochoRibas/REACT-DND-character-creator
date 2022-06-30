@@ -130,6 +130,8 @@ const RaceSelector = () => {
       setState({
         ...state,
         race: race,
+        speed: 25,
+        fly: 50,
         str: 0,
         dex: 2,
         con: 0,
@@ -168,6 +170,8 @@ const RaceSelector = () => {
       setState({
         ...state,
         race: race,
+        speed: 30,
+        fly: 0,
         str: 1,
         dex: 0,
         con: 0,

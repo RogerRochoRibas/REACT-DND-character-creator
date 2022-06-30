@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../appProvider";
+import { ArmorClass, Initiative, Speed } from "./combatStats";
 
 const CharacterSheetContent = () => {
   const [state, setState] = useContext(AppContext);
@@ -598,39 +599,9 @@ const CharacterSheetContent = () => {
         </section>
         <section>
           <section className="combat">
-            <div className="armorclass">
-              <div>
-                <label htmlFor="ac">Armor Class</label>
-                <input
-                  className="userData"
-                  name="ac"
-                  placeholder="10"
-                  type="text"
-                />
-              </div>
-            </div>
-            <div className="initiative">
-              <div>
-                <label htmlFor="initiative">Initiative</label>
-                <input
-                  className="userData"
-                  name="initiative"
-                  placeholder="+0"
-                  type="text"
-                />
-              </div>
-            </div>
-            <div className="speed">
-              <div>
-                <label htmlFor="speed">Speed</label>
-                <input
-                  className="userData"
-                  name="speed"
-                  placeholder="30"
-                  type="text"
-                />
-              </div>
-            </div>
+            <ArmorClass />
+            <Initiative />
+            <Speed />
             <div className="hp">
               <div className="regular">
                 <div className="max">
