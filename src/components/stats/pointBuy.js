@@ -196,15 +196,23 @@ const Modify = (props) => {
       pointCost.pointCostINT -
       pointCost.pointCostWIS -
       pointCost.pointCostCHA;
+// modifiers
+  let STRmodifier = Math.floor((currentValues.pointbuySTR/2)-5)
+  let DEXmodifier = Math.floor((currentValues.pointbuyDEX/2)-5)
+  let CONmodifier = Math.floor((currentValues.pointbuyCON/2)-5)
+  let INTmodifier = Math.floor((currentValues.pointbuyINT/2)-5)
+  let WISmodifier = Math.floor((currentValues.pointbuyWIS/2)-5)
+  let CHAmodifier = Math.floor((currentValues.pointbuyCHA/2)-5)
+  setState({ ...state, STRmodifier: STRmodifier })
     setState({
       ...state,
       Points: newPoints,
-      pointbuySTR: currentValues.pointbuySTR,STR:currentValues.pointbuySTR,
-      pointbuyDEX: currentValues.pointbuyDEX,DEX:currentValues.pointbuyDEX,
-      pointbuyCON: currentValues.pointbuyCON,CON:currentValues.pointbuyCON,
-      pointbuyINT: currentValues.pointbuyINT,INT:currentValues.pointbuyINT,
-      pointbuyWIS: currentValues.pointbuyWIS,WIS:currentValues.pointbuyWIS,
-      pointbuyCHA: currentValues.pointbuyCHA,CHA:currentValues.pointbuyCHA
+      pointbuySTR: currentValues.pointbuySTR,STR:currentValues.pointbuySTR, STRmodifier: STRmodifier,
+      pointbuyDEX: currentValues.pointbuyDEX,DEX:currentValues.pointbuyDEX, DEXmodifier: DEXmodifier,
+      pointbuyCON: currentValues.pointbuyCON,CON:currentValues.pointbuyCON, CONmodifier: CONmodifier,
+      pointbuyINT: currentValues.pointbuyINT,INT:currentValues.pointbuyINT, INTmodifier: INTmodifier,
+      pointbuyWIS: currentValues.pointbuyWIS,WIS:currentValues.pointbuyWIS, WISmodifier: WISmodifier,
+      pointbuyCHA: currentValues.pointbuyCHA,CHA:currentValues.pointbuyCHA, CHAmodifier: CHAmodifier,
     });
   }
   return (

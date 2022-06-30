@@ -89,7 +89,7 @@ const CharacterSheetContent = () => {
                     <input
                       className="userData"
                       name="Strengthmod"
-                      placeholder="+0"
+                      placeholder={state.STRmodifier}
                     />
                   </div>
                 </li>
@@ -106,7 +106,7 @@ const CharacterSheetContent = () => {
                     <input
                       className="userData"
                       name="Dexteritymod"
-                      placeholder="+0"
+                      placeholder={state.DEXmodifier}
                     />
                   </div>
                 </li>
@@ -123,7 +123,7 @@ const CharacterSheetContent = () => {
                     <input
                       className="userData"
                       name="Constitutionmod"
-                      placeholder="+0"
+                      placeholder={state.CONmodifier}
                     />
                   </div>
                 </li>
@@ -140,7 +140,7 @@ const CharacterSheetContent = () => {
                     <input
                       className="userData"
                       name="Intelligencemod"
-                      placeholder="+0"
+                      placeholder={state.INTmodifier}
                     />
                   </div>
                 </li>
@@ -157,7 +157,7 @@ const CharacterSheetContent = () => {
                     <input
                       className="userData"
                       name="Wisdommod"
-                      placeholder="+0"
+                      placeholder={state.WISmodifier}
                     />
                   </div>
                 </li>
@@ -174,7 +174,7 @@ const CharacterSheetContent = () => {
                     <input
                       className="userData"
                       name="Charismamod"
-                      placeholder="+0"
+                      placeholder={state.CHAmodifier}
                     />
                   </div>
                 </li>
