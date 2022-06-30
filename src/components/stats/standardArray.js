@@ -67,7 +67,7 @@ const Select = (props) => {
   return (
     <select
       onChange={(e) => {
-        setState({ ...state, [props.value]: e.target.value });
+        setState({ ...state, [props.value]: e.target.value,[props.generalValue]: e.target.value });
       }}
     >
       {options.map((x, y) => (
@@ -85,17 +85,17 @@ const StandardArray = () => {
       <>
         <h2>{state.statsSystem}</h2>
         <h3>STR {state.standardSTR}</h3>
-        <Select value="standardSTR" />
+        <Select value="standardSTR" generalValue="STR" />
         <h3>DEX {state.standardDEX}</h3>
-        <Select value="standardDEX" />
+        <Select value="standardDEX" generalValue="DEX" />
         <h3>CON {state.standardCON}</h3>
-        <Select value="standardCON" />
+        <Select value="standardCON" generalValue="CON" />
         <h3>INT {state.standardINT}</h3>
-        <Select value="standardINT" />
+        <Select value="standardINT" generalValue="INT" />
         <h3>WIS {state.standardWIS}</h3>
-        <Select value="standardWIS" />
+        <Select value="standardWIS" generalValue="WIS" />
         <h3>CHA {state.standardCHA}</h3>
-        <Select value="standardCHA" />
+        <Select value="standardCHA" generalValue="CHA" />
       </>
     );
   }

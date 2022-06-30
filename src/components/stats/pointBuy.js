@@ -199,12 +199,12 @@ const Modify = (props) => {
     setState({
       ...state,
       Points: newPoints,
-      pointbuySTR: currentValues.pointbuySTR,
-      pointbuyDEX: currentValues.pointbuyDEX,
-      pointbuyCON: currentValues.pointbuyCON,
-      pointbuyINT: currentValues.pointbuyINT,
-      pointbuyWIS: currentValues.pointbuyWIS,
-      pointbuyCHA: currentValues.pointbuyCHA,
+      pointbuySTR: currentValues.pointbuySTR,STR:currentValues.pointbuySTR,
+      pointbuyDEX: currentValues.pointbuyDEX,DEX:currentValues.pointbuyDEX,
+      pointbuyCON: currentValues.pointbuyCON,CON:currentValues.pointbuyCON,
+      pointbuyINT: currentValues.pointbuyINT,INT:currentValues.pointbuyINT,
+      pointbuyWIS: currentValues.pointbuyWIS,WIS:currentValues.pointbuyWIS,
+      pointbuyCHA: currentValues.pointbuyCHA,CHA:currentValues.pointbuyCHA
     });
   }
   return (
