@@ -46,6 +46,7 @@ const ClassSelector = () => {
         ...state,
         chosenClass: "Fighter",
         hitPoints: 10,
+        hitDice: "1d10",
         armorProf: ["Light Armor", "Medium Armor", "Heavy Armor"],
         weaponProf: ["Simple Weapons", "Martial Weapons"],
         tools: false,
@@ -67,6 +68,10 @@ const ClassSelector = () => {
         saveINT: false,
         saveWIS: false,
         saveCHA: false,
+        classProf1: "",
+        classProf2: "",
+        classProf3: "",
+        classProf4: "",
       });
     }
   }

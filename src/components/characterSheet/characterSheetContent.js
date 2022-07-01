@@ -84,6 +84,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Strength"
                       placeholder={state.STR}
+                      disabled
                     />
                   </div>
                   <div className="modifier">
@@ -91,6 +92,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Strengthmod"
                       placeholder={state.STRmodifier}
+                      disabled
                     />
                   </div>
                 </li>
@@ -101,6 +103,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Dexterity"
                       placeholder={state.DEX}
+                      disabled
                     />
                   </div>
                   <div className="modifier">
@@ -108,6 +111,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Dexteritymod"
                       placeholder={state.DEXmodifier}
+                      disabled
                     />
                   </div>
                 </li>
@@ -118,6 +122,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Constitution"
                       placeholder={state.CON}
+                      disabled
                     />
                   </div>
                   <div className="modifier">
@@ -125,6 +130,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Constitutionmod"
                       placeholder={state.CONmodifier}
+                      disabled
                     />
                   </div>
                 </li>
@@ -135,6 +141,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Intelligence"
                       placeholder={state.INT}
+                      disabled
                     />
                   </div>
                   <div className="modifier">
@@ -142,6 +149,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Intelligencemod"
                       placeholder={state.INTmodifier}
+                      disabled
                     />
                   </div>
                 </li>
@@ -152,6 +160,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Wisdom"
                       placeholder={state.WIS}
+                      disabled
                     />
                   </div>
                   <div className="modifier">
@@ -159,6 +168,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Wisdommod"
                       placeholder={state.WISmodifier}
+                      disabled
                     />
                   </div>
                 </li>
@@ -169,6 +179,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Charisma"
                       placeholder={state.CHA}
+                      disabled
                     />
                   </div>
                   <div className="modifier">
@@ -176,6 +187,7 @@ const CharacterSheetContent = () => {
                       className="userData"
                       name="Charismamod"
                       placeholder={state.CHAmodifier}
+                      disabled
                     />
                   </div>
                 </li>
@@ -203,8 +215,9 @@ const CharacterSheetContent = () => {
                     <input
                       className="userData"
                       name="Strength-save"
-                      placeholder="+0"
+                      placeholder={state.STRsave}
                       type="text"
+                      disabled
                     />
                     <input
                       className="userData"
@@ -217,8 +230,9 @@ const CharacterSheetContent = () => {
                     <input
                       className="userData"
                       name="Dexterity-save"
-                      placeholder="+0"
+                      placeholder={state.DEXsave}
                       type="text"
+                      disabled
                     />
                     <input
                       className="userData"
@@ -230,8 +244,9 @@ const CharacterSheetContent = () => {
                     <label htmlFor="Constitution-save">Constitution</label>
                     <input
                       name="Constitution-save"
-                      placeholder="+0"
+                      placeholder={state.CONsave}
                       type="text"
+                      disabled
                     />
                     <input
                       className="userData"
@@ -243,8 +258,9 @@ const CharacterSheetContent = () => {
                     <label htmlFor="Intelligence-save">Intelligence</label>
                     <input
                       name="Intelligence-save"
-                      placeholder="+0"
+                      placeholder={state.INTsave}
                       type="text"
+                      disabled
                     />
                     <input
                       className="userData"
@@ -253,16 +269,17 @@ const CharacterSheetContent = () => {
                     />
                   </li>
                   <li>
-                    <label htmlFor="Wisedom-save">Wisedom</label>
+                    <label htmlFor="Wisdom-save">Wisdom</label>
                     <input
                       className="userData"
-                      name="Wisedom-save"
-                      placeholder="+0"
+                      name="Wisdom-save"
+                      placeholder={state.WISsave}
                       type="text"
+                      disabled
                     />
                     <input
                       className="userData"
-                      name="Wisedom-save-prof"
+                      name="Wisdom-save-prof"
                       type="checkbox"
                     />
                   </li>
@@ -271,8 +288,9 @@ const CharacterSheetContent = () => {
                     <input
                       className="userData"
                       name="Charisma-save"
-                      placeholder="+0"
+                      placeholder={state.CHAsave}
                       type="text"
+                      disabled
                     />
                     <input
                       className="userData"
@@ -447,7 +465,7 @@ const CharacterSheetContent = () => {
                   </li>
                   <li>
                     <label htmlFor="Nature">
-                      nature <span className="skill">(Wis)</span>
+                      Nature <span className="skill">(Wis)</span>
                     </label>
                     <input
                       className="userData"
@@ -609,13 +627,15 @@ const CharacterSheetContent = () => {
                   <input
                     className="userData"
                     name="maxhp"
-                    placeholder="10"
+                    placeholder={state.hitPoints}
                     type="text"
+                    disabled
                   />
                 </div>
                 <div className="current">
                   <label htmlFor="currenthp">Current Hit Points</label>
-                  <input className="userData" name="currenthp" type="text" />
+                  <input className="userData" name="currenthp" type="text"
+                    placeholder={state.hitPoints} disabled />
                 </div>
               </div>
               <div className="temporary">
@@ -630,13 +650,13 @@ const CharacterSheetContent = () => {
                   <input
                     className="userData"
                     name="totalhd"
-                    placeholder="2d10"
+                    placeholder={state.hitDice}
                     type="text"
                   />
                 </div>
                 <div className="remaining">
                   <label htmlFor="remaininghd">Hit Dice</label>
-                  <input className="userData" name="remaininghd" type="text" />
+                  <input className="userData" name="remaininghd" type="text" placeholder="1" />
                 </div>
               </div>
             </div>

@@ -4,7 +4,7 @@ import { AppContext } from "../../appProvider";
 const BackgroundShowcase = () => {
   const [state, setState] = useContext(AppContext);
   let chosenBackground = "";
-  let backgroundProf = "";
+  let backgroundProf1 = "";
   let backgroundProf2 = "";
   let languages = "";
   let bgEquipment = "";
@@ -13,7 +13,7 @@ const BackgroundShowcase = () => {
 
   if (state.background === "Acolyte") {
     chosenBackground = "Acolyte";
-    backgroundProf = "Insight";
+    backgroundProf1 = "Insight";
     backgroundProf2 = "Religion";
     languages = "Two of your choice";
     bgEquipment =
@@ -27,7 +27,7 @@ const BackgroundShowcase = () => {
     <div>
       <h2>{state.background}</h2>
       <p>
-        Proficiencies: {backgroundProf} {backgroundProf2}
+        Proficiencies: {backgroundProf1}, {backgroundProf2}
       </p>
       <p>Languages: {languages}</p>
       <p>Equipment: {bgEquipment}</p>

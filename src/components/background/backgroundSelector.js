@@ -26,16 +26,32 @@ const BackgroundSelector = () => {
     "Urchin",
   ];
 
+  function changeBackground(background) {
+    let backgroundProf1 = "";
+    let backgroundProf2 = ""
+    if (background === "Acolyte") {
+      backgroundProf1 = "Insight"
+      backgroundProf2 = "Religion"
+    }
+          setState({
+            ...state,
+            background: background,
+            backgroundProf1: backgroundProf1,
+            backgroundProf2: backgroundProf2,
+          })
+  }
+
   return (
     <div>
-        <select
-          className="choseBackground"
-          onChange={(e) => setState({ ...state, background: e.target.value })}
-        >
-          {backgroundList.map((x, y) => (
-            <option key={y}>{x}</option>
-          ))}
-        </select>
+      <select
+        className="choseBackground"
+        onChange={(e) => changeBackground(e.target.value)
+        }
+      >
+        {backgroundList.map((x, y) => (
+          <option key={y}>{x}</option>
+        ))}
+      </select>
     </div>
   );
 };

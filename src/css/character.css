@@ -464,7 +464,7 @@ form.charsheet main section.combat > div.speed > div input {
   border-radius: 10px;
   border: 1px solid black;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
 }
 form.charsheet main section.combat > div.hp {
   flex-basis: 100%;

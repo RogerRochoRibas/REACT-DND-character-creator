@@ -7,19 +7,19 @@ const RollStats = () => {
     function roll6() {
       return Math.floor(Math.random() * 6) + 1;
     }
-    function rollAndCalculate(iteration) {
-      var iteration = [roll6(), roll6(), roll6(), roll6()];
-      iteration.sort();
-      var addedDice = iteration[1] + iteration[2] + iteration[3];
-      iteration[4] = addedDice;
-      return iteration;
+    function rollAndCalculate() {
+      var rollFourDice = [roll6(), roll6(), roll6(), roll6()];
+      rollFourDice.sort();
+      var addedDice = rollFourDice[1] + rollFourDice[2] + rollFourDice[3];
+      rollFourDice[4] = addedDice;
+      return rollFourDice;
     }
-    var dice1 = rollAndCalculate("One");
-    var dice2 = rollAndCalculate("Two");
-    var dice3 = rollAndCalculate("Three");
-    var dice4 = rollAndCalculate("Four");
-    var dice5 = rollAndCalculate("Five");
-    var dice6 = rollAndCalculate("Six");
+    var dice1 = rollAndCalculate();
+    var dice2 = rollAndCalculate();
+    var dice3 = rollAndCalculate();
+    var dice4 = rollAndCalculate();
+    var dice5 = rollAndCalculate();
+    var dice6 = rollAndCalculate();
 
     setState({
       ...state,
@@ -146,34 +146,32 @@ const SelectRolled = (props) => {
   } else {
     options[6] = state.total6;
   }
+  var selectedIndex = 0
   return (
     <select
       onChange={(e) => {
         if (e.target.value == options[1]) {
-          var selectedIndex = 1;
+          selectedIndex = 1;
         }
         if (e.target.value == options[2]) {
-          var selectedIndex = 2;
+          selectedIndex = 2;
         }
         if (e.target.value == options[3]) {
-          var selectedIndex = 3;
+          selectedIndex = 3;
         }
         if (e.target.value == options[4]) {
-          var selectedIndex = 4;
+          selectedIndex = 4;
         }
         if (e.target.value == options[5]) {
-          var selectedIndex = 5;
+          selectedIndex = 5;
         }
         if (e.target.value == options[6]) {
-          var selectedIndex = 6;
+          selectedIndex = 6;
         }
-        let value = [e.target.value];
-        let modifier = Math.floor(value / 2 - 5);
         setState({
           ...state,
           [props.value]: [e.target.value],
           [props.option]: selectedIndex,
-          [props.modifier]: modifier,
         });
       }}
     >
@@ -220,12 +218,12 @@ const RollForstats = () => {
   useEffect(() => {
     setState({
       ...state,
-      STR: "",
-      DEX: "",
-      CON: "",
-      INT: "",
-      WIS: "",
-      CHA: "",
+      rollSTR: "",
+      rollDEX: "",
+      rollCON: "",
+      rollINT: "",
+      rollWIS: "",
+      rollCHA: "",
       STRoption: "",
       DEXoption: "",
       CONoption: "",
@@ -313,18 +311,18 @@ const RollForstats = () => {
           roll2={state.roll62}
           roll3={state.roll63}
         />
-        <h3>STR {state.STR}</h3>
-        <SelectRolled value="STR" option="STRoption" modifier="STRmodifier" />
-        <h3>DEX {state.DEX}</h3>
-        <SelectRolled value="DEX" option="DEXoption" modifier="DEXmodifier" />
-        <h3>CON {state.CON}</h3>
-        <SelectRolled value="CON" option="CONoption" modifier="CONmodifier" />
-        <h3>INT {state.INT}</h3>
-        <SelectRolled value="INT" option="INToption" modifier="INTmodifier" />
-        <h3>WIS {state.WIS}</h3>
-        <SelectRolled value="WIS" option="WISoption" modifier="WISmodifier" />
-        <h3>CHA {state.CHA}</h3>
-        <SelectRolled value="CHA" option="CHAoption" modifier="CHAmodifier" />
+        <h3>STR {state.rollSTR}</h3>
+        <SelectRolled value="rollSTR" option="STRoption" />
+        <h3>DEX {state.rollDEX}</h3>
+        <SelectRolled value="rollDEX" option="DEXoption" />
+        <h3>CON {state.rollCON}</h3>
+        <SelectRolled value="rollCON" option="CONoption" />
+        <h3>INT {state.rollINT}</h3>
+        <SelectRolled value="rollINT" option="INToption" />
+        <h3>WIS {state.rollWIS}</h3>
+        <SelectRolled value="rollWIS" option="WISoption" />
+        <h3>CHA {state.rollCHA}</h3>
+        <SelectRolled value="rollCHA" option="CHAoption" />
       </>
     );
   }

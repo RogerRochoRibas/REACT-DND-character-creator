@@ -9,10 +9,10 @@ export const ArmorClass = () => {
       AC = 16;
     }
     if (state.choice0 === "Leather armor, longbow and 20 arrows") {
-      AC = 11 + state.DEXmodifier;
+      AC = 11 + state.ACmodifier;
     }
     if (!state.choice0) {
-      AC = 10 + state.DEXmodifier
+      AC = 10 + state.ACmodifier;
     }
   }
   return (
@@ -33,13 +33,7 @@ export const ArmorClass = () => {
 
 export const Initiative = () => {
   const [state, setState] = useContext(AppContext);
-  let modifier = "0";
-  if (state.DEXmodifier > 0) {
-    modifier = "+" + state.DEXmodifier;
-  }
-  if (state.DEXmodifier < 0) {
-    modifier = state.DEXmodifier;
-  }
+  let modifier = state.DEXmodifier;
   return (
     <div className="initiative">
       <div>
@@ -57,17 +51,14 @@ export const Initiative = () => {
 };
 export const Speed = () => {
   const [state, setState] = useContext(AppContext);
-  console.log('fly',state.fly)
-  let speed = 30
-    if (state.fly > 0) {
-      speed = state.speed + "/" + state.fly;
-      console.log('speed with fly',speed)
-    }
-    if ((state.fly === 0)) {
-      speed = state.speed;
-      console.log('speed without fly',speed)
-    }
-  
+  let speed = 30;
+  if (state.fly > 0) {
+    speed = state.speed + "/" + state.fly;
+  }
+  if (state.fly === 0) {
+    speed = state.speed;
+  }
+
   return (
     <div className="speed">
       <div>
