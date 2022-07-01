@@ -58,8 +58,7 @@ const ChangePage = () => {
     if (state.chosenClass === "Barbarian") {
       STRprof = 2;
       CONprof = 2;
-    }
-    if (state.chosenClass === "Bard") {
+    }if (state.chosenClass === "Bard") {
       DEXprof = 2;
       CHAprof = 2;
     }if (state.chosenClass === "Cleric") {
@@ -95,12 +94,12 @@ const ChangePage = () => {
     }
 
     // saving throws plus symbol
-    let STRsave = STRmodifier + STRprof;
-    let DEXsave = DEXmodifier + DEXprof;
-    let CONsave = CONmodifier + CONprof;
-    let INTsave = INTmodifier + INTprof;
-    let WISsave = WISmodifier + WISprof;
-    let CHAsave = CHAmodifier + CHAprof;
+    let STRsave = Number(STRmodifier) + STRprof;
+    let DEXsave = Number(DEXmodifier) + DEXprof;
+    let CONsave = Number(CONmodifier) + CONprof;
+    let INTsave = Number(INTmodifier) + INTprof;
+    let WISsave = Number(WISmodifier) + WISprof;
+    let CHAsave = Number(CHAmodifier) + CHAprof;
     let STRSaveSymbol = ""
     let DEXSaveSymbol = ""
     let CONSaveSymbol = ""

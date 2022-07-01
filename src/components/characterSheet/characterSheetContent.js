@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../../appProvider";
 import { ArmorClass, Initiative, Speed } from "./combatStats";
+import SavingThrows from "./savingThrows";
 import SkillChecks from "./skillChecks";
 
 const CharacterSheetContent = () => {
@@ -211,94 +212,7 @@ const CharacterSheetContent = () => {
               </div>
               <div className="saves list-section box">
                 <ul>
-                  <li>
-                    <label htmlFor="Strength-save">Strength</label>
-                    <input
-                      className="userData"
-                      name="Strength-save"
-                      placeholder={state.STRsave}
-                      type="text"
-                      disabled
-                    />
-                    <input
-                      className="userData"
-                      name="Strength-save-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Dexterity-save">Dexterity</label>
-                    <input
-                      className="userData"
-                      name="Dexterity-save"
-                      placeholder={state.DEXsave}
-                      type="text"
-                      disabled
-                    />
-                    <input
-                      className="userData"
-                      name="Dexterity-save-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Constitution-save">Constitution</label>
-                    <input
-                      name="Constitution-save"
-                      placeholder={state.CONsave}
-                      type="text"
-                      disabled
-                    />
-                    <input
-                      className="userData"
-                      name="Constitution-save-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Intelligence-save">Intelligence</label>
-                    <input
-                      name="Intelligence-save"
-                      placeholder={state.INTsave}
-                      type="text"
-                      disabled
-                    />
-                    <input
-                      className="userData"
-                      name="Intelligence-save-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Wisdom-save">Wisdom</label>
-                    <input
-                      className="userData"
-                      name="Wisdom-save"
-                      placeholder={state.WISsave}
-                      type="text"
-                      disabled
-                    />
-                    <input
-                      className="userData"
-                      name="Wisdom-save-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Charisma-save">Charisma</label>
-                    <input
-                      className="userData"
-                      name="Charisma-save"
-                      placeholder={state.CHAsave}
-                      type="text"
-                      disabled
-                    />
-                    <input
-                      className="userData"
-                      name="Charisma-save-prof"
-                      type="checkbox"
-                    />
-                  </li>
+                  <SavingThrows />
                 </ul>
                 <div className="label">Saving Throws</div>
               </div>
