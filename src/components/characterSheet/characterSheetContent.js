@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../../appProvider";
 import { ArmorClass, Initiative, Speed } from "./combatStats";
+import SkillChecks from "./skillChecks";
 
 const CharacterSheetContent = () => {
   const [state, setState] = useContext(AppContext);
@@ -303,294 +304,7 @@ const CharacterSheetContent = () => {
               </div>
               <div className="skills list-section box">
                 <ul>
-                  <li>
-                    <label htmlFor="Acrobatics">
-                      Acrobatics <span className="skill">(Dex)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Acrobatics"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Acrobatics-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Animal Handling">
-                      Animal Handling <span className="skill">(Wis)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Animal Handling"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Animal Handling-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Arcana">
-                      Arcana <span className="skill">(Int)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Arcana"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Arcana-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Athletics">
-                      Athletics <span className="skill">(Str)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Athletics"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Athletics-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Deception">
-                      Deception <span className="skill">(Cha)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Deception"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Deception-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="History">
-                      History <span className="skill">(Int)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="History"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="History-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Insight">
-                      Insight <span className="skill">(Wis)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Insight"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Insight-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Intimidation">
-                      Intimidation <span className="skill">(Cha)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Intimidation"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Intimidation-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Investigation">
-                      Investigation <span className="skill">(Int)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Investigation"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Investigation-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Medicine">
-                      Medicine <span className="skill">(Wis)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Medicine"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Medicine-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Nature">
-                      Nature <span className="skill">(Wis)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Nature"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Nature-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Perception">
-                      Perception <span className="skill">(Wis)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Perception"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Perception-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Performance">
-                      Performance <span className="skill">(Cha)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Performance"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Performance-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Persuasion">
-                      Persuasion <span className="skill">(Cha)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Persuasion"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Persuasion-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Religion">
-                      Religion <span className="skill">(Int)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Religion"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Religion-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Sleight of Hand">
-                      Sleight of Hand <span className="skill">(Dex)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Sleight of Hand"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Sleight of Hand-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Stealth">
-                      Stealth <span className="skill">(Dex)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Stealth"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Stealth-prof"
-                      type="checkbox"
-                    />
-                  </li>
-                  <li>
-                    <label htmlFor="Survival">
-                      Survival <span className="skill">(Wis)</span>
-                    </label>
-                    <input
-                      className="userData"
-                      name="Survival"
-                      placeholder="+0"
-                      type="text"
-                    />
-                    <input
-                      className="userData"
-                      name="Survival-prof"
-                      type="checkbox"
-                    />
-                  </li>
+                  <SkillChecks />
                 </ul>
                 <div className="label">Skills</div>
               </div>
@@ -634,8 +348,13 @@ const CharacterSheetContent = () => {
                 </div>
                 <div className="current">
                   <label htmlFor="currenthp">Current Hit Points</label>
-                  <input className="userData" name="currenthp" type="text"
-                    placeholder={state.hitPoints} disabled />
+                  <input
+                    className="userData"
+                    name="currenthp"
+                    type="text"
+                    placeholder={state.hitPoints}
+                    disabled
+                  />
                 </div>
               </div>
               <div className="temporary">
@@ -656,7 +375,12 @@ const CharacterSheetContent = () => {
                 </div>
                 <div className="remaining">
                   <label htmlFor="remaininghd">Hit Dice</label>
-                  <input className="userData" name="remaininghd" type="text" placeholder="1" />
+                  <input
+                    className="userData"
+                    name="remaininghd"
+                    type="text"
+                    placeholder="1"
+                  />
                 </div>
               </div>
             </div>

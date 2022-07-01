@@ -163,7 +163,7 @@ const ChangePage = () => {
     totalProf[8] = state.raceProf2
     let proficiencyList = ["Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation","Medicine","Nature","Perception","Performance","Persuasion","Religion","Sleight of Hand","Stalth","Survival"]
     let profValues = []
-    proficiencyList.map((e,i) => {if (totalProf.includes(e)) {profValues[e]=2} else {profValues[e]=0}})
+    proficiencyList.map((e) => {if (totalProf.includes(e)) {profValues[e]=2} else {profValues[e]=0}})
     setState({
       ...state,
       profValues:profValues,
