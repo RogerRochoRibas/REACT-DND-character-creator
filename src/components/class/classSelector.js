@@ -25,7 +25,7 @@ const ClassSelector = () => {
 
   let classesMounted = ClassList.map((element, key) => {
     return (
-      <div>
+      <div key={key}>
         <input
           key={key}
           type="radio"

@@ -12,9 +12,9 @@ const SubclassShowcase = () => {
       },
     ];
   } else { var subclasses = []}
-  let subclassesMounted = subclasses.map((element) => {
+  let subclassesMounted = subclasses.map((element, index) => {
     return (
-      <div className="subclassSection">
+      <div key={index} className="subclassSection">
         <h4>{element.title}</h4>
         <p>{element.description}</p>
       </div>

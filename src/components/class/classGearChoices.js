@@ -19,7 +19,7 @@ const ClassGearChoices = () => {
   }
   let gearOptionsMounted = gearOptions.map((element, choice) => {
     return (
-      <div>
+      <div key={choice}>
         <input
           type="radio"
           id={element.option1}
