@@ -233,7 +233,7 @@ const CharacterSheetContent = () => {
             <input
               className="userData"
               name="passiveperception"
-              placeholder="10"
+              placeholder={state.passiveWIS}
             />
           </div>
           <div className="otherprofs box textblock">

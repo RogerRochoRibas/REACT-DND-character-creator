@@ -182,6 +182,7 @@ const ChangePage = () => {
       WISmodifier: WISModSymbol+WISmodifier,
       WIS: WIS,
       WISsave: WISSaveSymbol + WISsave,
+      passiveWIS:10+WISmodifier,
       CHAmodifier: CHAModSymbol+CHAmodifier,
       CHA: CHA,
       CHAsave: CHASaveSymbol + CHAsave,
