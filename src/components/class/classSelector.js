@@ -45,7 +45,7 @@ const ClassSelector = () => {
       setState({
         ...state,
         chosenClass: "Fighter",
-        hitPoints: 10,
+        classHitPoints: 10,
         hitDice: "1d10",
         armorProf: ["Light Armor", "Medium Armor", "Heavy Armor"],
         weaponProf: ["Simple Weapons", "Martial Weapons"],

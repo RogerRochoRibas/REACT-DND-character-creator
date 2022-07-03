@@ -163,8 +163,12 @@ const ChangePage = () => {
     let proficiencyList = ["Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation","Medicine","Nature","Perception","Performance","Persuasion","Religion","Sleight of Hand","Stalth","Survival"]
     let profValues = []
     proficiencyList.map((e) => {if (totalProf.includes(e)) {profValues[e]=2} else {profValues[e]=0}})
+
+    // hp
+    let hitPoints = state.classHitPoints+Number(state.CONmodifier)
     setState({
       ...state,
+      hitPoints:hitPoints,
       profValues:profValues,
       ACmodifier:DEXmodifier,
       STRmodifier: STRModSymbol+STRmodifier,
