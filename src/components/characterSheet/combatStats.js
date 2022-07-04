@@ -15,6 +15,12 @@ export const ArmorClass = () => {
       AC = 10 + state.ACmodifier;
     }
   }
+  if (state.chosenClass === "Barbarian") {
+    AC = 10 + Number(state.CONmodifier) + Number(state.DEXmodifier)
+  }
+  if (state.chosenClass === "Monk") {
+    AC = 10 + Number(state.WISmodifier) + Number(state.DEXmodifier)
+  }
   return (
     <div className="armorclass">
       <div>

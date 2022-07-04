@@ -23,6 +23,14 @@ const ClassGearChoices = () => {
       },
       { option1: "Two Handaxes", option2: "Any Simple Weapon" },
     ];
+  } if (state.chosenClass === "Monk") {
+    gearOptions = [
+      {
+        option1: "Shortsword",
+        option2: "Any Simple Weapon",
+      },
+      { option1: "Dungeonee's Pack", option2: "Explorer's Pack" },
+    ];
   } else {
     gearOptions = [];
   }

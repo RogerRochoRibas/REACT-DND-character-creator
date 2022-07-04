@@ -129,6 +129,36 @@ const ClassSelector = () => {
         skillOptionsText:[]
       });
     }
+    if (currentClass === "Monk") {
+      setState({
+        ...state,
+        chosenClass: "Monk",
+        classHitPoints: 8,
+        hitDice: "1d8",
+        armorProf: [""],
+        weaponProf: ["Simple Weapons", "Short Swords"],
+        tools: "Any one type of Artisan's tools or any Musical Instrument of your choice",
+        skillProf: [
+          "--",
+          "Acrobatics",
+          "Athletics",
+          "History",
+          "Insight",
+          "Religion",
+          "Stealth",
+        ],
+        profNumber: 2,
+        classProf1: "",
+        classProf2: "",
+        classProf3: "",
+        classProf4: "",
+        classSkill1:"Unarmored Defense",
+        classSkill2:"Martial Arts",
+        skillOtions: [],
+        selectedSkillOption: "",
+        skillOptionsText:[]
+      });
+    }
   }
   return classesMounted;
 };
