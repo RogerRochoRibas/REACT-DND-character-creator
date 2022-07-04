@@ -4,32 +4,124 @@ import { AppContext } from "../../appProvider";
 const ClassGearChoices = () => {
   const [state, setState] = useContext(AppContext);
   var gearOptions = [];
-  if (state.chosenClass === "Fighter") {
-    gearOptions = [
-      {
-        option1: "Chain Mail",
-        option2: "Leather armor, longbow and 20 arrows",
-      },
-      { option1: "Martial weapon and shield", option2: "Two martial weapons" },
-      { option1: "Light crossbow and 20 bolts", option2: "Two handaxes" },
-      { option1: "Dungeoneer's pack", option2: "Explorer's pack" },
-    ];
-  }
+
   if (state.chosenClass === "Barbarian") {
     gearOptions = [
       {
         option1: "Greataxe",
-        option2: "Any Martial Melee Weapon",
+        option2: "Any martial melee weapon",
       },
-      { option1: "Two Handaxes", option2: "Any Simple Weapon" },
+      { option1: "Two handaxes", option2: "Any simple weapon" },
     ];
-  } if (state.chosenClass === "Monk") {
+  }
+  if (state.chosenClass === "Bard") {
+    gearOptions = [
+      {
+        option1: "Rapier",
+        option2: "Longsword",
+      },
+      { option1: "A lute", option2: "Any other musical instrument" },
+      { option1: "Diplomnat's Pack", option2: "Entertainer's Pack" },
+    ];
+  }
+  if (state.chosenClass === "Cleric") {
+    gearOptions = [
+      {
+        option1: "Mace",
+        option2: "Warhammer (only if proficient)",
+      },
+      { option1: "Scale Mail", option2: "Leather Armor" },
+      { option1: "Light crossbow and 20 bolts", option2: "Any simple weapon" },
+      { option1: "Priest's Pack", option2: "Explorer's Pack" },
+    ];
+  }
+  if (state.chosenClass === "Druid") {
+    gearOptions = [
+      {
+        option1: "Shield",
+        option2: "Any simple Weapon",
+      },
+      { option1: "Scimitar", option2: "Any simple melee weapon" },
+    ];
+  }
+  if (state.chosenClass === "Fighter") {
+    gearOptions = [
+      {
+        option1: "Chain mail",
+        option2: "Leather armor, longbow and 20 arrows",
+      },
+      { option1: "Martial weapon and shield", option2: "Two martial weapons" },
+      { option1: "Light crossbow and 20 bolts", option2: "Two handaxes" },
+      { option1: "Dungeoneer's Pack", option2: "Explorer's Pack" },
+    ];
+  }
+  if (state.chosenClass === "Monk") {
     gearOptions = [
       {
         option1: "Shortsword",
-        option2: "Any Simple Weapon",
+        option2: "Any simple weapon",
       },
-      { option1: "Dungeonee's Pack", option2: "Explorer's Pack" },
+      { option1: "Dungeoner's Pack", option2: "Explorer's Pack" },
+    ];
+  }
+  if (state.chosenClass === "Paladin") {
+    gearOptions = [
+      {
+        option1: "Martial weapon and shield",
+        option2: "Two martial weapons",
+      },
+      { option1: "Five javelins", option2: "Any simple melee weapon" },
+      { option1: "Priest's Pack", option2: "Explorer's Pack" },
+    ];
+  }
+  if (state.chosenClass === "Ranger") {
+    gearOptions = [
+      {
+        option1: "Scale Mail",
+        option2: "Leather Armor",
+      },
+      { option1: "Two Shortswords", option2: "Two simple melee weapons" },
+      { option1: "Dungeoneer's Pack", option2: "Explorer's Pack" },
+    ];
+  }
+  if (state.chosenClass === "Rogue") {
+    gearOptions = [
+      {
+        option1: "Rapier",
+        option2: "Shortsword",
+      },
+      { option1: "Shortbow, quiver and 20 arrows", option2: "Shortsword" },
+      { option1: "Dungeoner's Pack", option2: "Burglar's Pack" },
+    ];
+  }
+  if (state.chosenClass === "Sorcerer") {
+    gearOptions = [
+      {
+        option1: "Light crossbow and 20 bolts",
+        option2: "Any simple weapon",
+      },
+      { option1: "Component pouch", option2: "Arcane focus" },
+      { option1: "Dungeoneer's Pack", option2: "Explorer's Pack" },
+    ];
+  }
+  if (state.chosenClass === "Warlock") {
+    gearOptions = [
+      {
+        option1: "Light crossbow and 20 bolts",
+        option2: "Any simple weapon",
+      },
+      { option1: "Component pouch", option2: "Arcane focus" },
+      { option1: "Scholar's Pack", option2: "Dungeoneer's Pack" },
+    ];
+  }
+  if (state.chosenClass === "Wizard") {
+    gearOptions = [
+      {
+        option1: "Quarterstaff",
+        option2: "Dagger",
+      },
+      { option1: "Component pouch", option2: "Arcane focus" },
+      { option1: "Scholar's Pack", option2: "Explorer's Pack" },
     ];
   } else {
     gearOptions = [];
