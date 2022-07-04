@@ -3,7 +3,7 @@ import { AppContext } from "../../appProvider";
 
 const ClassGearChoices = () => {
   const [state, setState] = useContext(AppContext);
-  var gearOptions = []
+  var gearOptions = [];
   if (state.chosenClass === "Fighter") {
     gearOptions = [
       {
@@ -13,6 +13,15 @@ const ClassGearChoices = () => {
       { option1: "Martial weapon and shield", option2: "Two martial weapons" },
       { option1: "Light crossbow and 20 bolts", option2: "Two handaxes" },
       { option1: "Dungeoneer's pack", option2: "Explorer's pack" },
+    ];
+  }
+  if (state.chosenClass === "Barbarian") {
+    gearOptions = [
+      {
+        option1: "Greataxe",
+        option2: "Any Martial Melee Weapon",
+      },
+      { option1: "Two Handaxes", option2: "Any Simple Weapon" },
     ];
   } else {
     gearOptions = [];

@@ -3,6 +3,7 @@ import { AppContext } from "../../appProvider";
 import { ArmorClass, Initiative, Speed } from "./combatStats";
 import SavingThrows from "./savingThrows";
 import SkillChecks from "./skillChecks";
+import Features from "./features";
 
 const CharacterSheetContent = () => {
   const [state, setState] = useContext(AppContext);
@@ -480,7 +481,9 @@ const CharacterSheetContent = () => {
           <section className="features">
             <div>
               <label htmlFor="features">Features & Traits</label>
-              <textarea name="features"></textarea>
+              <ul>
+              <Features />
+              </ul>
             </div>
           </section>
         </section>

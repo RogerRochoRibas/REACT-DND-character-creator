@@ -802,10 +802,12 @@ form.charsheet main section.features div {
 form.charsheet main section.features div label {
   text-align: center;
 }
-form.charsheet main section.features div textarea {
+form.charsheet main section.features div ul {
   border: 0;
   padding: 5px;
-  height: 43em;
+  height: 32em;
+  text-align: left;
+  font-size:medium
 }
 .userData {
   color:rgb(100, 100, 100);

@@ -25,7 +25,7 @@ const SetManually = () => {
             className="manualInput"
             type="number"
             onChange={(e) => {
-              setState({ ...state, manualSTR: e.target.value });
+              setState({ ...state, manualSTR: Number(e.target.value) });
             }}
           />
         </h3>
@@ -36,7 +36,7 @@ const SetManually = () => {
             type="number"
             className="manualInput"
             onChange={(e) => {
-              setState({ ...state, manualDEX: e.target.value });
+              setState({ ...state, manualDEX: Number(e.target.value) });
             }}
           />
         </h3>
@@ -47,7 +47,7 @@ const SetManually = () => {
             type="number"
             className="manualInput"
             onChange={(e) => {
-              setState({ ...state, manualCON: e.target.value });
+              setState({ ...state, manualCON: Number(e.target.value) });
             }}
           />
         </h3>
@@ -56,7 +56,7 @@ const SetManually = () => {
           type="number"
           className="manualInput"
           onChange={(e) => {
-            setState({ ...state, manualINT: e.target.value });
+            setState({ ...state, manualINT: Number(e.target.value) });
           }}
         /></h3>
         
@@ -66,7 +66,7 @@ const SetManually = () => {
             type="number"
             className="manualInput"
             onChange={(e) => {
-              setState({ ...state, manualWIS: e.target.value });
+              setState({ ...state, manualWIS: Number(e.target.value) });
             }}
           />
         </h3>
@@ -77,7 +77,7 @@ const SetManually = () => {
             type="number"
             className="manualInput"
             onChange={(e) => {
-              setState({ ...state, manualCHA: e.target.value });
+              setState({ ...state, manualCHA: Number(e.target.value) });
             }}
           />
         </h3>

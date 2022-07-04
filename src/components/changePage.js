@@ -166,6 +166,10 @@ const ChangePage = () => {
 
     // hp
     let hitPoints = state.classHitPoints+Number(state.CONmodifier)
+    // features & traits
+    let features = []
+    features[1] = state.classSkill1+": "+state.selectedSkillOption
+    features[2] = state.classSkill2
     setState({
       ...state,
       hitPoints:hitPoints,
@@ -190,7 +194,9 @@ const ChangePage = () => {
       CHAmodifier: CHAModSymbol+CHAmodifier,
       CHA: CHA,
       CHAsave: CHASaveSymbol + CHAsave,
+      features:features,
     });
+    
   }
 
   return (

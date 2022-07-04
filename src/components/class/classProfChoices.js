@@ -6,7 +6,7 @@ const ClassProfChoices = () => {
 
   return (
     <>
-      {state.skillNumber > 0 && (
+      {state.profNumber > 0 && (
         <>
           <select
             className="choseProf"
@@ -18,7 +18,7 @@ const ClassProfChoices = () => {
           </select>
         </>
       )}
-      {state.skillNumber > 1 && (
+      {state.profNumber > 1 && (
         <>
           <select
             className="choseProf"
@@ -30,14 +30,14 @@ const ClassProfChoices = () => {
           </select>
         </>
       )}
-      {state.skillNumber > 2 && (
+      {state.profNumber > 2 && (
         <>
           <select
             onChange={(e) => {
               setState({ ...state, classProf3: e.target.value });
             }}
           >
-            {state.skillProf3.map((x, y) => (
+            {state.skillProf.map((x, y) => (
               <option key={y}>{x}</option>
             ))}
           </select>
