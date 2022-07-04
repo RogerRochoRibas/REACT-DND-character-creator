@@ -13,8 +13,7 @@ const ClassGearChoices = () => {
       },
       { option1: "Two handaxes", option2: "Any simple weapon" },
     ];
-  }
-  if (state.chosenClass === "Bard") {
+  } else if (state.chosenClass === "Bard") {
     gearOptions = [
       {
         option1: "Rapier",
@@ -23,8 +22,7 @@ const ClassGearChoices = () => {
       { option1: "A lute", option2: "Any other musical instrument" },
       { option1: "Diplomnat's Pack", option2: "Entertainer's Pack" },
     ];
-  }
-  if (state.chosenClass === "Cleric") {
+  } else if (state.chosenClass === "Cleric") {
     gearOptions = [
       {
         option1: "Mace",
@@ -34,8 +32,7 @@ const ClassGearChoices = () => {
       { option1: "Light crossbow and 20 bolts", option2: "Any simple weapon" },
       { option1: "Priest's Pack", option2: "Explorer's Pack" },
     ];
-  }
-  if (state.chosenClass === "Druid") {
+  } else if (state.chosenClass === "Druid") {
     gearOptions = [
       {
         option1: "Shield",
@@ -43,8 +40,7 @@ const ClassGearChoices = () => {
       },
       { option1: "Scimitar", option2: "Any simple melee weapon" },
     ];
-  }
-  if (state.chosenClass === "Fighter") {
+  } else if (state.chosenClass === "Fighter") {
     gearOptions = [
       {
         option1: "Chain mail",
@@ -54,8 +50,7 @@ const ClassGearChoices = () => {
       { option1: "Light crossbow and 20 bolts", option2: "Two handaxes" },
       { option1: "Dungeoneer's Pack", option2: "Explorer's Pack" },
     ];
-  }
-  if (state.chosenClass === "Monk") {
+  } else if (state.chosenClass === "Monk") {
     gearOptions = [
       {
         option1: "Shortsword",
@@ -63,8 +58,7 @@ const ClassGearChoices = () => {
       },
       { option1: "Dungeoner's Pack", option2: "Explorer's Pack" },
     ];
-  }
-  if (state.chosenClass === "Paladin") {
+  } else if (state.chosenClass === "Paladin") {
     gearOptions = [
       {
         option1: "Martial weapon and shield",
@@ -73,8 +67,7 @@ const ClassGearChoices = () => {
       { option1: "Five javelins", option2: "Any simple melee weapon" },
       { option1: "Priest's Pack", option2: "Explorer's Pack" },
     ];
-  }
-  if (state.chosenClass === "Ranger") {
+  } else if (state.chosenClass === "Ranger") {
     gearOptions = [
       {
         option1: "Scale mail",
@@ -83,8 +76,7 @@ const ClassGearChoices = () => {
       { option1: "Two shortswords", option2: "Two simple melee weapons" },
       { option1: "Dungeoneer's Pack", option2: "Explorer's Pack" },
     ];
-  }
-  if (state.chosenClass === "Rogue") {
+  } else if (state.chosenClass === "Rogue") {
     gearOptions = [
       {
         option1: "Rapier",
@@ -93,8 +85,7 @@ const ClassGearChoices = () => {
       { option1: "Shortbow, quiver and 20 arrows", option2: "Shortsword" },
       { option1: "Dungeoner's Pack", option2: "Burglar's Pack" },
     ];
-  }
-  if (state.chosenClass === "Sorcerer") {
+  } else if (state.chosenClass === "Sorcerer") {
     gearOptions = [
       {
         option1: "Light crossbow and 20 bolts",
@@ -103,8 +94,7 @@ const ClassGearChoices = () => {
       { option1: "Component pouch", option2: "Arcane focus" },
       { option1: "Dungeoneer's Pack", option2: "Explorer's Pack" },
     ];
-  }
-  if (state.chosenClass === "Warlock") {
+  } else if (state.chosenClass === "Warlock") {
     gearOptions = [
       {
         option1: "Light crossbow and 20 bolts",
@@ -113,8 +103,7 @@ const ClassGearChoices = () => {
       { option1: "Component pouch", option2: "Arcane focus" },
       { option1: "Scholar's Pack", option2: "Dungeoneer's Pack" },
     ];
-  }
-  if (state.chosenClass === "Wizard") {
+  } else if (state.chosenClass === "Wizard") {
     gearOptions = [
       {
         option1: "Quarterstaff",

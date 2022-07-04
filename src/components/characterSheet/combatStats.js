@@ -20,7 +20,7 @@ export const ArmorClass = () => {
   if (state.chosenClass === "Cleric" || state.chosenClass === "Ranger") {
     if (state.choice1 === "Scale mail") {
       AC = 14 + state.ACmodifier;
-      if (ACmodifier > 2) {
+      if (state.ACmodifier > 2) {
         AC = 16;
       }
     }

@@ -43,6 +43,19 @@ const ClassProfChoices = () => {
           </select>
         </>
       )}
+      {state.profNumber > 3 && (
+        <>
+          <select
+            onChange={(e) => {
+              setState({ ...state, classProf4: e.target.value });
+            }}
+          >
+            {state.skillProf.map((x, y) => (
+              <option key={y}>{x}</option>
+            ))}
+          </select>
+        </>
+      )}
     </>
   );
 };

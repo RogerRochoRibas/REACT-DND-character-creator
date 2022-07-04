@@ -206,8 +206,7 @@ const ChangePage = () => {
     let features = [];
     if (state.chosenClass === "Fighter") {
       features[1] = state.classSkill1 + ": " + state.selectedSkillOption;
-    }
-    if (state.chosenClass === "Barbarian") {
+    } else {
       features[1] = state.classSkill1;
     }
     features[2] = state.classSkill2;

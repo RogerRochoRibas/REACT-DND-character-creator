@@ -136,7 +136,7 @@ const ClassSelector = () => {
         classHitPoints: 8,
         hitDice: "1d8",
         armorProf: [""],
-        weaponProf: ["Simple Weapons", "Short Swords"],
+        weaponProf: ["Simple Weapons", "Shortswords"],
         tools: "Any one type of Artisan's tools or any Musical Instrument of your choice",
         skillProf: [
           "--",
@@ -157,6 +157,47 @@ const ClassSelector = () => {
         skillOtions: [],
         selectedSkillOption: "",
         skillOptionsText:[]
+      });
+    }
+    if (currentClass === "Rogue") {
+      setState({
+        ...state,
+        chosenClass: "Rogue",
+        classHitPoints: 8,
+        hitDice: "1d8",
+        armorProf: ["Light armor"],
+        weaponProf: [
+          "Simple Weapons",
+          "Hand crossbows",
+          "Longswords",
+          "Rapiers",
+          "Shortswords",
+        ],
+        tools: "Thieves' tools",
+        skillProf: [
+          "--",
+          "Acrobatics",
+          "Athletics",
+          "Deception",
+          "Insight",
+          "Intimidation",
+          "Investigation",
+          "Perception",
+          "Performance",
+          "Persuasion",
+          "Sleight of Hand",
+          "Stealth",
+        ],
+        profNumber: 4,
+        classProf1: "",
+        classProf2: "",
+        classProf3: "",
+        classProf4: "",
+        classSkill1: "Expertise",
+        classSkill2: "Sneak Attack",
+        skillOtions: [],
+        selectedSkillOption: "",
+        skillOptionsText: [],
       });
     }
   }

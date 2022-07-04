@@ -24,6 +24,11 @@ const ClassShowcase = () => {
     subtitle = "The Speed and Power of the Body";
     difficulty = "Medium";
   }
+  if (state.chosenClass === "Rogue") {
+    mainStat = "Dexterity";
+    subtitle = "All the Cunning and twice the Versatility";
+    difficulty = "Medium";
+  }
   return (
     <div>
       <h2>{state.chosenClass}</h2>
