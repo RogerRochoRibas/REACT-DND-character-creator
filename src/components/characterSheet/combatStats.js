@@ -4,6 +4,43 @@ import { AppContext } from "../../appProvider";
 export const ArmorClass = () => {
   const [state, setState] = useContext(AppContext);
   let AC = 10;
+  // Barbarian
+  if (state.chosenClass === "Barbarian") {
+    AC = 10 + Number(state.CONmodifier) + Number(state.DEXmodifier);
+  }
+  // Bard, Rogue, Warlock
+  if (
+    state.chosenClass === "Bard" ||
+    state.chosenClass === "Rogue" ||
+    state.chosenClass === "Warlock"
+  ) {
+    AC = 11 + Number(state.DEXmodifier);
+  }
+  // Cleric, Ranger
+  if (state.chosenClass === "Cleric" || state.chosenClass === "Ranger") {
+    if (state.choice1 === "Scale mail") {
+      AC = 14 + state.ACmodifier;
+      if (ACmodifier > 2) {
+        AC = 16;
+      }
+    }
+    if (state.choice0 === "Leather armor") {
+      AC = 11 + state.ACmodifier;
+    }
+    if (!state.choice0) {
+      AC = 10 + state.ACmodifier;
+    }
+  }
+  // Druid
+  if (state.chosenClass === "Druid") {
+    if (state.choice0 === "Shield") {
+      AC = 13 + state.ACmodifier;
+    }
+    if (!state.choice0 === "Shield") {
+      AC = 11 + state.ACmodifier;
+    }
+  }
+  // Fighter
   if (state.chosenClass === "Fighter") {
     if (state.choice0 === "Chain Mail") {
       AC = 16;
@@ -15,12 +52,24 @@ export const ArmorClass = () => {
       AC = 10 + state.ACmodifier;
     }
   }
-  if (state.chosenClass === "Barbarian") {
-    AC = 10 + Number(state.CONmodifier) + Number(state.DEXmodifier)
-  }
+  // Monk
   if (state.chosenClass === "Monk") {
-    AC = 10 + Number(state.WISmodifier) + Number(state.DEXmodifier)
+    AC = 10 + Number(state.WISmodifier) + Number(state.DEXmodifier);
   }
+  // Paladin
+  if (state.chosenClass === "Paladin") {
+    if (state.choice0 === "Martial weapon and shield") {
+      AC = 18;
+    }
+    if (!state.choice0 === "Martial weapon and shield") {
+      AC = 16;
+    }
+  }
+  // Sorcerer, Wizard
+  if (state.chosenClass === "Sorcerer" || state.chosenClass === "Wizard") {
+    AC = 10 + state.ACmodifier;
+  }
+
   return (
     <div className="armorclass">
       <div>

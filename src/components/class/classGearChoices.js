@@ -30,7 +30,7 @@ const ClassGearChoices = () => {
         option1: "Mace",
         option2: "Warhammer (only if proficient)",
       },
-      { option1: "Scale Mail", option2: "Leather Armor" },
+      { option1: "Scale mail", option2: "Leather armor" },
       { option1: "Light crossbow and 20 bolts", option2: "Any simple weapon" },
       { option1: "Priest's Pack", option2: "Explorer's Pack" },
     ];
@@ -77,10 +77,10 @@ const ClassGearChoices = () => {
   if (state.chosenClass === "Ranger") {
     gearOptions = [
       {
-        option1: "Scale Mail",
-        option2: "Leather Armor",
+        option1: "Scale mail",
+        option2: "Leather armor",
       },
-      { option1: "Two Shortswords", option2: "Two simple melee weapons" },
+      { option1: "Two shortswords", option2: "Two simple melee weapons" },
       { option1: "Dungeoneer's Pack", option2: "Explorer's Pack" },
     ];
   }
