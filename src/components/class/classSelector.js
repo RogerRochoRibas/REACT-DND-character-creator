@@ -49,6 +49,7 @@ const ClassSelector = () => {
         hitDice: "1d10",
         armorProf: ["Light Armor", "Medium Armor", "Heavy Armor"],
         weaponProf: ["Simple Weapons", "Martial Weapons"],
+        basicClassGear: classGear,
         tools: false,
         skillProf: [
           "--",

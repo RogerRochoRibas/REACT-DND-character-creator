@@ -210,6 +210,17 @@ const ChangePage = () => {
       features[1] = state.classSkill1;
     }
     features[2] = state.classSkill2;
+    if (state.feature1) {features[3] = state.feature1};
+    if (state.feature2) {features[4] = state.feature2};
+    if (state.feature3) {features[5] = state.feature3};
+    if (state.feature4) {features[6] = state.feature4};
+    if (state.feature5) {features[7] = state.feature5};
+    if (state.feature6) {features[8] = state.feature6};
+    if (state.feature7) {features[9] = state.feature7};
+    if (state.feature8) {features[10] = state.feature8};
+    if (state.feature9) {features[11] = state.feature9};
+    if (state.feature10) {features[12] = state.feature10};
+    if (state.feature11) {features[13] = state.feature11};
     setState({
       ...state,
       hitPoints: hitPoints,

@@ -3,6 +3,7 @@ import { AppContext } from "../../appProvider";
 import ClassGearChoices from "./classGearChoices";
 import ClassProfChoices from "./classProfChoices";
 import ClassSkills from "./classSkills";
+import ClassGear from "./classGear";
 
 const ClassShowcase = () => {
   const [state, setState] = useContext(AppContext);
@@ -42,6 +43,7 @@ const ClassShowcase = () => {
         <h4>Proficiencies</h4>
         <ClassProfChoices />
         <h4>Starting Gear</h4>
+        <ClassGear />
         <ClassGearChoices />
       </div>
     </div>

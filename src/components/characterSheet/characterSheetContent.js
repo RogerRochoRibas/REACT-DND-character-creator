@@ -451,10 +451,11 @@ const CharacterSheetContent = () => {
                 </ul>
               </div>
               <div className="chosenGear">
-                <p>{state.choice0}</p>
-                <p>{state.choice1}</p>
-                <p>{state.choice2}</p>
-                <p>{state.choice3}</p>
+                <p>{state.gearClassChoice0}</p>
+                <p>{state.gearClassChoice1}</p>
+                <p>{state.gearClassChoice2}</p>
+                <p>{state.gearClassChoice3}</p>
+                <p>{state.basicClassGear}</p>
               </div>
             </div>
           </section>

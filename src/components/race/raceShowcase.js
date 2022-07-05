@@ -11,23 +11,23 @@ const RaceShowcase = () => {
   var chaText = "";
   var freeStatText = "";
 
-  if (state.str > 0) {
-    strText = "Str +" + [state.str];
+  if (state.raceSTR > 0) {
+    strText = "Str +" + [state.raceSTR] + ".";
   }
-  if (state.dex > 0) {
-    dexText = "Dex +" + [state.dex];
+  if (state.raceDEX > 0) {
+    dexText = "Dex +" + [state.raceDEX] + ".";
   }
-  if (state.con > 0) {
-    conText = "Con +" + [state.con];
+  if (state.raceCON > 0) {
+    conText = "Con +" + [state.raceCON] + ".";
   }
-  if (state.int > 0) {
-    intText = "Int +" + [state.int];
+  if (state.raceINT > 0) {
+    intText = "Int +" + [state.raceINT] + ".";
   }
-  if (state.wis > 0) {
-    wisText = "Wis +" + [state.wis];
+  if (state.raceWIS > 0) {
+    wisText = "Wis +" + [state.raceWIS] + ".";
   }
-  if (state.cha > 0) {
-    chaText = "Cha +" + [state.cha];
+  if (state.raceCHA > 0) {
+    chaText = "Cha +" + [state.raceCHA] + ".";
   }
   if (state.freeStat === 1) {
     freeStatText = "Choose any other +1";
@@ -39,27 +39,33 @@ const RaceShowcase = () => {
     freeStatText =
       "Choose any +2 and choose any other +1 OR Choose any three different +1";
   }
-  if (state.str === 0) {
+  if (state.raceSTR === 0) {
     strText = "";
   }
-  if (state.dex === 0) {
+  if (state.raceDEX === 0) {
     dexText = "";
   }
-  if (state.con === 0) {
+  if (state.raceCON === 0) {
     conText = "";
   }
-  if (state.int === 0) {
+  if (state.raceINT === 0) {
     intText = "";
   }
-  if (state.wis === 0) {
+  if (state.raceWIS === 0) {
     wisText = "";
   }
-  if (state.cha === 0) {
+  if (state.raceCHA === 0) {
     chaText = "";
   }
   if (state.freeStat === 0) {
     freeStatText = "";
   }
+  if (state.freeStat === 1) freeStatText = "Choose any other +1.";
+
+  if (state.freeStat === 2) freeStatText = "Choose any other two unique +1.";
+  if (state.freeStat === 3)
+    freeStatText =
+      "You can add 3 points to your stats (with no more than 2 on the same ability score).";
   return (
     <div className="classFeatures">
       <h2>{state.race}</h2>
@@ -93,7 +99,68 @@ const RaceShowcase = () => {
         <span>{state.feature5}</span>
         <span>{state.feature5text}</span>
       </p>
+      <p>
+        <span>{state.feature6}</span>
+        <span>{state.feature6text}</span>
+      </p>
+      <p>
+        <span>{state.feature7}</span>
+        <span>{state.feature7text}</span>
+      </p>
+      <p>
+        <span>{state.feature8}</span>
+        <span>{state.feature8text}</span>
+      </p>
+      <p>
+        <span>{state.feature9}</span>
+        <span>{state.feature9text}</span>
+      </p>
+      <p>
+        <span>{state.feature10}</span>
+        <span>{state.feature10text}</span>
+      </p>
+      <p>
+        <span>{state.feature11}</span>
+        <span>{state.feature11text}</span>
+      </p>
+      <ProficiencyOptions />
     </div>
+  );
+};
+
+const ProficiencyOptions = () => {
+  const [state, setState] = useContext(AppContext);
+
+  return (
+    <>
+      {state.raceProfChoice1 && (
+        <>
+          <select
+            onChange={(e) => {
+              setState({ ...state, classProf1: e.target.value });
+            }}
+          >
+            {state.raceProfOptions1.map((x, y) => (
+              <option key={y}>{x}</option>
+            ))}
+          </select>
+        </>
+      )}
+      {state.raceProfChoice2 && (
+          <>
+            <select
+              onChange={(e) => {
+                setState({ ...state, classProf2: e.target.value });
+              }}
+            >
+              {state.raceProfOptions2.map((x, y) => (
+                <option key={y}>{x}</option>
+              ))}
+            </select>
+          </>
+        )
+      }
+    </>
   );
 };
 export default RaceShowcase;
