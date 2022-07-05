@@ -201,7 +201,7 @@ const ChangePage = () => {
     });
 
     // hp
-    let hitPoints = state.classHitPoints + Number(state.CONmodifier);
+    let hitPoints = state.classHitPoints + Number(CONmodifier);
     // features & traits
     let features = [];
     if (state.chosenClass === "Fighter") {
