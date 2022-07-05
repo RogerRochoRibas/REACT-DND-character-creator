@@ -80,13 +80,13 @@ const ClassShowcase = () => {
         Main Stat: {mainStat} Difficulty: {difficulty}
       </p>
       <div>
+        <h4>Skills</h4>
+        <ClassSkills />
         <h4>Proficiencies</h4>
         <ClassProfChoices />
         <h4>Starting Gear</h4>
         <ClassGear />
         <ClassGearChoices />
-        <h4>Skills</h4>
-        <ClassSkills />
       </div>
     </div>
   );

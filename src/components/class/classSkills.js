@@ -139,6 +139,159 @@ const ClassSkills = () => {
       </div>
     );
   }
+  if (state.chosenClass === "Cleric") {
+    return (
+      <div>
+        <h4>Spellcasting</h4>
+        <p>As a conduit for divine power, you can cast cleric spells.</p>
+        <h5>Cantrips</h5>
+        <p>
+          You know three cantrips of your choice from the cleric spell list. You
+          learn additional cleric cantrips at level 4 and 10.
+        </p>
+        <h5>Spells</h5>
+        <p>
+          You know all the cleric spells, but can only use the ones you prepare.
+          You can change your prepared spells at the end of a long rest.
+        </p>
+        <p>
+          You can prepare a number of cleric spells equal to your Wisdom
+          Modifier + Your Cleric Level.
+        </p>
+        <h5>Spell Slots</h5>
+        <p>
+          To cast a Spell (not a Cantrip) you consume a Spell Slot. At level 1
+          you have 2 1st-level Spell Slots and recover all of them with a Long
+          Rest.
+        </p>
+        <h5>Spellcasting Ability</h5>
+        <p>
+          You use your Wisdom modifier when setting the saving throw DC for a
+          cleric spell you cast and when making an attack roll with one.
+        </p>
+        <p>Spell save DC = 8 + your proficiency bonus + your Wisdom modifier</p>
+        <p>
+          Spell attack modifier = your proficiency bonus + your Wisdom modifier
+        </p>
+        <h5>Ritual Casting</h5>
+        <p>
+          You can cast any cleric spell you know as a ritual if that spell has
+          the ritual tag.
+        </p>
+        <h5>Spellcasting Focus</h5>
+        <p>
+          You can use a holy symbol as a spellcasting focus for your cleric
+          spells.
+        </p>
+        <select
+          className="choseSkill"
+          onChange={(e) =>
+            setState({ ...state, selectedSubclass: e.target.value })
+          }
+        >
+          {skillOptions.map((x, y) => (
+            <option key={y}>{x}</option>
+          ))}
+        </select>
+        {state.selectedSubclass === "Arcana" && (
+          <div>
+            <p>{state.subclass1Text[0]}</p>
+            <p>{state.subclass1Text[1]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Death" && (
+          <div>
+            <p>{state.subclass2Text[0]}</p>
+            <p>{state.subclass2Text[1]}</p>
+            <p>{state.subclass2Text[2]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Forge" && (
+          <div>
+            <p>{state.subclass3Text[0]}</p>
+            <p>{state.subclass3Text[1]}</p>
+            <p>{state.subclass4Text[2]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Grave" && (
+          <div>
+            <p>{state.subclass4Text[0]}</p>
+            <p>{state.subclass4Text[1]}</p>
+            <p>{state.subclass4Text[2]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Knowledge" && (
+          <div>
+            <p>{state.subclass5Text[0]}</p>
+            <p>{state.subclass5Text[1]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Life" && (
+          <div>
+            <p>{state.subclass6Text[0]}</p>
+            <p>{state.subclass6Text[1]}</p>
+            <p>{state.subclass6Text[2]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Light" && (
+          <div>
+            <p>{state.subclass7Text[0]}</p>
+            <p>{state.subclass7Text[1]}</p>
+            <p>{state.subclass7Text[2]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Nature" && (
+          <div>
+            <p>{state.subclass8Text[0]}</p>
+            <p>{state.subclass8Text[1]}</p>
+            <p>{state.subclass8Text[2]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Order" && (
+          <div>
+            <p>{state.subclass9Text[0]}</p>
+            <p>{state.subclass9Text[1]}</p>
+            <p>{state.subclass9Text[2]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Peace" && (
+          <div>
+            <p>{state.subclass10Text[0]}</p>
+            <p>{state.subclass10Text[1]}</p>
+            <p>{state.subclass10Text[2]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Tempest" && (
+          <div>
+            <p>{state.subclass11Text[0]}</p>
+            <p>{state.subclass11Text[1]}</p>
+            <p>{state.subclass11Text[2]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Trikcery" && (
+          <div>
+            <p>{state.subclass12Text[0]}</p>
+            <p>{state.subclass12Text[1]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "Twilight" && (
+          <div>
+            <p>{state.subclass13Text[0]}</p>
+            <p>{state.subclass13Text[1]}</p>
+            <p>{state.subclass13Text[2]}</p>
+            <p>{state.subclass13Text[3]}</p>
+          </div>
+        )}
+        {state.selectedSubclass === "War" && (
+          <div>
+            <p>{state.subclass14Text[0]}</p>
+            <p>{state.subclass14Text[1]}</p>
+            <p>{state.subclass14Text[2]}</p>
+          </div>
+        )}
+      </div>
+    );
+  }
   if (state.chosenClass === "Fighter") {
     return (
       <div>
