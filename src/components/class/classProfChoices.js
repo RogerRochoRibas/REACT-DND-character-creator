@@ -5,7 +5,7 @@ const ClassProfChoices = () => {
   const [state, setState] = useContext(AppContext);
 
   return (
-    <>
+    <><p>Your class allows you to chose some proficiencies.</p>
       {state.profNumber > 0 && (
         <>
           <select

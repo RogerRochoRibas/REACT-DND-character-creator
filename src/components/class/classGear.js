@@ -31,7 +31,7 @@ const ClassGear = () => {
     classGear = "A spellbook"
   }
   return (
-    <p>{classGear}</p>
+    <p>{state.basicClassGear}</p>
   )
 }
 
