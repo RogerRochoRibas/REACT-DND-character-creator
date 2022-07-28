@@ -4,18 +4,12 @@ import { AppContext } from "../../appProvider";
 const ClassSelector = () => {
   const [state, setState] = useContext(AppContext);
   let ClassList = [
-    "Fighter",
     "Barbarian",
-    "Monk",
-    "Rogue",
-    "Ranger",
-    "Paladin",
     "Bard",
     "Cleric",
-    "Druid",
-    "Sorcerer",
-    "Warlock",
-    "Wizard",
+    "Fighter",
+    "Monk",
+    "Rogue",
   ];
   useEffect(() => {
     let random = Math.floor(Math.random() * ClassList.length);
@@ -67,7 +61,7 @@ const ClassSelector = () => {
         classProf4: "",
         classSkill1: "Rage",
         classSkill2: "Unarmored Defense",
-        skillOtions: [],
+        skillOptions: [],
         selectedSkillOption: "",
         skillOptionsText: [],
       });
@@ -89,6 +83,7 @@ const ClassSelector = () => {
         basicClassGear: "Leather armor, and a dagger",
         tools: false,
         skillProf: [
+          "--",
           "Acrobatics",
           "Animal Handling",
           "Arcana",
@@ -115,7 +110,7 @@ const ClassSelector = () => {
         classProf4: "",
         classSkill1: "Bardic Inspiration",
         classSkill2: "Spellcasting",
-        skillOtions: [],
+        skillOptions: [],
         selectedSkillOption: "",
         skillOptionsText: [],
       });
@@ -139,7 +134,7 @@ const ClassSelector = () => {
         classProf4: "",
         classSkill1: "Divine Domain",
         classSkill2: "Spellcasting",
-        skillOtions: [
+        skillOptions: [
           "--",
           "Arcana",
           "Death",
@@ -257,7 +252,7 @@ const ClassSelector = () => {
         classProf4: "",
         classSkill1: "Fighting Style",
         classSkill2: "Second Wind",
-        skillOtions: [
+        skillOptions: [
           "--",
           "Archery",
           "Blind Fighting",
@@ -313,7 +308,7 @@ const ClassSelector = () => {
         classProf4: "",
         classSkill1: "Unarmored Defense",
         classSkill2: "Martial Arts",
-        skillOtions: [],
+        skillOptions: [],
         selectedSkillOption: "",
         skillOptionsText: [],
       });
@@ -355,7 +350,7 @@ const ClassSelector = () => {
         classProf4: "",
         classSkill1: "Expertise",
         classSkill2: "Sneak Attack",
-        skillOtions: [],
+        skillOptions: [],
         selectedSkillOption: "",
         skillOptionsText: [],
       });

@@ -252,19 +252,19 @@ const ChangePage = () => {
   return (
     <div>
       <Link to="/">
-        <button>Class</button>
+        <button className="navButton">Class</button>
       </Link>
       <Link to="/stats">
-        <button>Stats</button>
+        <button className="navButton">Stats</button>
       </Link>
       <Link to="/race">
-        <button>Race</button>
+        <button className="navButton">Race</button>
       </Link>
       <Link to="/background">
-        <button>Background</button>
+        <button className="navButton">Background</button>
       </Link>
       <Link to="/CharacterSheet">
-        <button onClick={() => calculateSheet()}>Character Sheet</button>
+        <button className="navButton" onClick={() => calculateSheet()}>Character</button>
       </Link>
     </div>
   );

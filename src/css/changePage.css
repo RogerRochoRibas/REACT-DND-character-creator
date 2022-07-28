@@ -1,0 +1,43 @@
+
+.navButton {
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  margin-left: -1px;
+  outline: none;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: 100px;
+}
+
+.navButton:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.navButton:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+.navButton:hover {
+  border-color: #DDDDDD;
+  color: #DDDDDD;
+  background-color: #000000;
+  opacity: 1;
+}

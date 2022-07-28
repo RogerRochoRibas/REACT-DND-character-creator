@@ -3,7 +3,8 @@ import { AppContext } from "../../appProvider";
 
 const ClassSkills = () => {
   const [state, setState] = useContext(AppContext);
-  let skillOptions = state.skillOtions;
+  let skillOptions = [{},{}];
+  skillOptions = state.skillOptions;
 
   if (state.chosenClass === "Barbarian") {
     return (

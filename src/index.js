@@ -5,6 +5,7 @@ import './css/dice.css'
 import './css/manualInput.css'
 import './css/race.css'
 import './css/character.css'
+import './css/changePage.css'
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
