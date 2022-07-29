@@ -1,7 +1,7 @@
 
 .navButton {
-  background-color: #FFFFFF;
-  border: 1px solid #222222;
+  background-color: #ffffff00;
+  border: 2px solid #222222;
   box-sizing: border-box;
   color: #222222;
   cursor: pointer;
@@ -11,7 +11,9 @@
   font-weight: 600;
   line-height: 20px;
   margin: 0;
-  margin-left: -1px;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left: -2px;
   outline: none;
   padding: 8px 16px;
   position: relative;

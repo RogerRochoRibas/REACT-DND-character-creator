@@ -47,6 +47,7 @@ form.charsheet div.textblock label {
 }
 form.charsheet div.textblock textarea {
   border: 1px solid black;
+  background: rgba(255, 255, 255, 0);
 }
 form.charsheet ul {
   margin: 0;
@@ -79,7 +80,7 @@ form.charsheet header section.charname {
   border-right: 0;
   border-radius: 10px 0 0 10px;
   padding: 5px 0;
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0);
   width: 30%;
   display: flex;
   flex-direction: column-reverse;
@@ -124,12 +125,13 @@ form.charsheet header section.misc ul li label {
   text-align: left;
 }
 form.charsheet header section.misc ul li input {
+  background: rgba(255, 255, 255, 0);
   border: 0;
-  border-bottom: 1px solid rgb(100, 100, 100);
+  border-bottom: 1px solid rgb(30, 30, 30);
 }
 section.misc ul li input::placeholder {
   text-align: center;
-  color: rgb(100, 100, 100);
+  color: rgb(30, 30, 30);
 }
 form.charsheet main {
   display: flex;
@@ -209,7 +211,7 @@ form.charsheet
   text-align: center;
   font-size: 40px;
   padding: 2px 0px 0px 0px;
-  background: white;
+  background: rgb(255, 255, 255);
 }
 form.charsheet main > section section.attributes div.scores ul li div.modifier {
   margin-top: 3px;
@@ -227,7 +229,7 @@ form.charsheet
   width: 30px;
   height: 20px;
   border: 1px inset black;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: -1px;
   text-align: center;
 }
@@ -414,7 +416,7 @@ form.charsheet main > section div.otherprofs textarea {
   height: 26em;
 }
 form.charsheet main section.combat {
-  background-color: #eee;
+  background-color: rgba(238, 238, 238, 0);
   display: flex;
   flex-wrap: wrap;
   border-radius: 10px;
@@ -440,9 +442,9 @@ form.charsheet main section.combat > div.initiative > div label,
 form.charsheet main section.combat > div.speed > div label {
   font-size: 8px;
   width: 50px;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   border-top: 0;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -451,6 +453,7 @@ form.charsheet main section.combat > div.speed > div label {
 form.charsheet main section.combat > div.armorclass > div input,
 form.charsheet main section.combat > div.initiative > div input,
 form.charsheet main section.combat > div.speed > div input {
+  background: rgba(255, 255, 255, 0);
   height: 70px;
   width: 70px;
   border-radius: 10px;
@@ -462,7 +465,7 @@ form.charsheet main section.combat > div.hp {
   flex-basis: 100%;
 }
 form.charsheet main section.combat > div.hp > div.regular {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   border: 1px solid black;
   margin: 10px;
   margin-bottom: 5px;
@@ -510,9 +513,10 @@ form.charsheet main section.combat > div.hp > div.temporary {
   border-radius: 0 0 10px 10px;
   display: flex;
   flex-direction: column-reverse;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
 }
 form.charsheet main section.combat > div.hp > div.temporary input {
+  background:rgba(255, 255, 255, 0);
   padding: 1em 0;
   font-size: 20px;
   border: 0;
@@ -534,7 +538,7 @@ form.charsheet main section.combat > div.deathsaves > div {
   height: 80px;
 }
 form.charsheet main section.combat > div.hitdice > div {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
   margin: 10px;
   border: 1px solid black;
   border-radius: 10px;
@@ -580,7 +584,7 @@ form.charsheet main section.combat > div.hitdice > div > div.remaining input {
 }
 form.charsheet main section.combat > div.deathsaves > div {
   margin: 10px;
-  background: white;
+  background: rgba(255, 255, 255, 0);
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
@@ -693,6 +697,7 @@ form.charsheet main section.attacksandspellcasting > div > table input {
   padding: 3px;
 }
 form.charsheet main section.attacksandspellcasting > div textarea {
+  background: rgba(255, 255, 255, 0);
   border: 0;
 }
 form.charsheet main section.equipment {
@@ -726,6 +731,7 @@ form.charsheet main section.equipment > div > div.money ul > li label {
   padding: 3px 0;
 }
 form.charsheet main section.equipment > div > div.money ul > li input {
+  background:rgba(255, 255, 255, 0);
   border: 1px solid black;
   border-radius: 10px;
   width: 40px;
@@ -802,7 +808,7 @@ form.charsheet main section.features div ul {
   font-size:medium
 }
 .userData {
-  color:rgb(100, 100, 100);
+  color:rgb(30, 30, 30);
 }
 .userData::placeholder {
   color:rgb(255, 0, 0);

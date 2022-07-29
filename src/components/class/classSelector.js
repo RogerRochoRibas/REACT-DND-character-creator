@@ -1,12 +1,24 @@
 import { useContext, useEffect } from "react";
 import { AppContext } from "../../appProvider";
+import barbarian from "../../img/barbarian.png"
+import bard from "../../img/bard.png"
+import cleric from "../../img/cleric.png"
+import druid from "../../img/druid.png"
+import fighter from "../../img/fighter.png"
+import monk from "../../img/monk.png"
+import paladin from "../../img/paladin.png"
+import ranger from "../../img/ranger.png"
+import rogue from "../../img/rogue.png"
+import sorcerer from "../../img/sorcerer.png"
+import warlock from "../../img/warlock.png"
+import wizard from "../../img/wizard.png"
 
 const ClassSelector = () => {
   const [state, setState] = useContext(AppContext);
-  let ClassList = ["Barbarian", "Bard", "Cleric", "Fighter", "Monk", "Rogue"];
+  let ClassList = [{"name":"Barbarian","url":barbarian}, {"name":"Bard","url":bard}, {"name":"Cleric","url":cleric}, {"name":"Druid","url":druid}, {"name":"Fighter","url":fighter}, {"name":"Monk","url":monk}, {"name":"Paladin","url":paladin}, {"name":"Ranger","url":ranger}, {"name":"Rogue","url":rogue}, {"name":"Sorcerer","url":sorcerer}, {"name":"Warlock","url":warlock}, {"name":"Wizard","url":wizard}];
   useEffect(() => {
     let random = Math.floor(Math.random() * ClassList.length);
-    let randomClass = ClassList[random];
+    let randomClass = ClassList[random].name;
     setState({ ...state, chosenClass: randomClass });
   }, []);
 
@@ -16,30 +28,21 @@ const ClassSelector = () => {
         <input
           key={key}
           type="radio"
-          id={element}
+          id={element.name}
           name="chosen_class"
-          value={element}
+          value={element.name}
+          className="hidden"
           onChange={(e) => {
             changeClass(e.target.value);
           }}
         />
-        <label htmlFor={element}>
+        <label htmlFor={element.name}>
           <div className="classImage">
             <img
               className="classImage-profile-img"
-              src="class main image pending"
+              src={element.url}
               alt=""
             />
-            <div className="classImage-name-bk"></div>
-            <div className="classImage-logo">
-              <img
-                src="class logo pending"
-                alt=""
-              />
-            </div>
-            <div className="classImage-name">
-              <p>{element}</p>
-            </div>
           </div>
         </label>
       </div>
