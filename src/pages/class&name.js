@@ -8,7 +8,7 @@ const Class = () => {
     <div>
         <ChangePage />
         <NameInput />
-        <ClassSelector />
+        <div className="classList"><ClassSelector /></div>
         <ClassShowcase />
     </div>
   );

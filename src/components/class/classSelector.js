@@ -3,14 +3,7 @@ import { AppContext } from "../../appProvider";
 
 const ClassSelector = () => {
   const [state, setState] = useContext(AppContext);
-  let ClassList = [
-    "Barbarian",
-    "Bard",
-    "Cleric",
-    "Fighter",
-    "Monk",
-    "Rogue",
-  ];
+  let ClassList = ["Barbarian", "Bard", "Cleric", "Fighter", "Monk", "Rogue"];
   useEffect(() => {
     let random = Math.floor(Math.random() * ClassList.length);
     let randomClass = ClassList[random];
@@ -19,7 +12,7 @@ const ClassSelector = () => {
 
   let classesMounted = ClassList.map((element, key) => {
     return (
-      <div key={key}>
+      <div className="classOption" key={key}>
         <input
           key={key}
           type="radio"
@@ -30,7 +23,25 @@ const ClassSelector = () => {
             changeClass(e.target.value);
           }}
         />
-        <label htmlFor={element}>{element}</label>
+        <label htmlFor={element}>
+          <div className="classImage">
+            <img
+              className="classImage-profile-img"
+              src="class main image pending"
+              alt=""
+            />
+            <div className="classImage-name-bk"></div>
+            <div className="classImage-logo">
+              <img
+                src="class logo pending"
+                alt=""
+              />
+            </div>
+            <div className="classImage-name">
+              <p>{element}</p>
+            </div>
+          </div>
+        </label>
       </div>
     );
   });
@@ -151,7 +162,7 @@ const ClassSelector = () => {
           "Twilight",
           "War",
         ],
-        selectedSubclass:"",
+        selectedSubclass: "",
         selectedSkillOption: "",
         skillOptionsText: [],
         subclass1Text: [
@@ -195,12 +206,12 @@ const ClassSelector = () => {
         subclass9Text: [
           "Voice of Authority: Starting at 1st level, you can invoke the power of law to drive an ally to attack. If you cast a spell with a spell slot of 1st level or higher and target an ally with the spell, that ally can use their reaction immediately after the spell to make one weapon attack against a creature of your choice that you can see. If the spell targets more than one ally, you choose the ally who can make the attack.",
           "Bonus Proficiency: When you choose this domain at 1st level, you gain proficiency with heavy armor. You also gain proficiency in the Intimidation or Persuasion skill (your choice).",
-          "Order Domain Spells: At first level you learn: Command and Heroism",
+          "Order Domain Spells: At first level you learn: Command and classImageism",
         ],
         subclass10Text: [
           "Emboldening Bond: You can forge an empowering bond among people who are at peace with one another. As an action, you choose a number of willing creatures within 30 feet of you (this can include yourself) equal to your proficiency bonus. You create a magical bond among them for 10 minutes or until you use this feature again. While any bonded creature is within 30 feet of another, the creature can roll a d4 and add the number rolled to an attack roll, an ability check, or a saving throw it makes. Each creature can add the d4 no more than once per turn. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
           "Implement of Peace: You gain proficiency in the Insight, Performance, or Persuasion skill (your choice).",
-          "Peace Domain Spells: At first level you learn: Heroism and Sanctuary",
+          "Peace Domain Spells: At first level you learn: classImageism and Sanctuary",
         ],
         subclass11Text: [
           "Wrath of the Storm: You can thunderously rebuke attackers. When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. The creature takes 2d8 lightning or thunder damage (your choice) on a failed saving throw, and half as much damage on a successful one. You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest.",
