@@ -1,21 +1,34 @@
 import { useContext, useEffect } from "react";
 import { AppContext } from "../../appProvider";
-import barbarian from "../../img/barbarian.png"
-import bard from "../../img/bard.png"
-import cleric from "../../img/cleric.png"
-import druid from "../../img/druid.png"
-import fighter from "../../img/fighter.png"
-import monk from "../../img/monk.png"
-import paladin from "../../img/paladin.png"
-import ranger from "../../img/ranger.png"
-import rogue from "../../img/rogue.png"
-import sorcerer from "../../img/sorcerer.png"
-import warlock from "../../img/warlock.png"
-import wizard from "../../img/wizard.png"
+import barbarian from "../../img/barbarian.png";
+import bard from "../../img/bard.png";
+import cleric from "../../img/cleric.png";
+import druid from "../../img/druid.png";
+import fighter from "../../img/fighter.png";
+import monk from "../../img/monk.png";
+import paladin from "../../img/paladin.png";
+import ranger from "../../img/ranger.png";
+import rogue from "../../img/rogue.png";
+import sorcerer from "../../img/sorcerer.png";
+import warlock from "../../img/warlock.png";
+import wizard from "../../img/wizard.png";
 
 const ClassSelector = () => {
   const [state, setState] = useContext(AppContext);
-  let ClassList = [{"name":"Barbarian","url":barbarian}, {"name":"Bard","url":bard}, {"name":"Cleric","url":cleric}, {"name":"Druid","url":druid}, {"name":"Fighter","url":fighter}, {"name":"Monk","url":monk}, {"name":"Paladin","url":paladin}, {"name":"Ranger","url":ranger}, {"name":"Rogue","url":rogue}, {"name":"Sorcerer","url":sorcerer}, {"name":"Warlock","url":warlock}, {"name":"Wizard","url":wizard}];
+  let ClassList = [
+    { name: "Barbarian", url: barbarian },
+    { name: "Bard", url: bard },
+    { name: "Cleric", url: cleric },
+    { name: "Druid", url: druid },
+    { name: "Fighter", url: fighter },
+    { name: "Monk", url: monk },
+    { name: "Paladin", url: paladin },
+    { name: "Ranger", url: ranger },
+    { name: "Rogue", url: rogue },
+    { name: "Sorcerer", url: sorcerer },
+    { name: "Warlock", url: warlock },
+    { name: "Wizard", url: wizard },
+  ];
   useEffect(() => {
     let random = Math.floor(Math.random() * ClassList.length);
     let randomClass = ClassList[random].name;
@@ -38,11 +51,7 @@ const ClassSelector = () => {
         />
         <label htmlFor={element.name}>
           <div className="classImage">
-            <img
-              className="classImage-profile-img"
-              src={element.url}
-              alt=""
-            />
+            <img className="classImage-profile-img" src={element.url} alt="" />
           </div>
         </label>
       </div>
@@ -129,7 +138,6 @@ const ClassSelector = () => {
         skillOptionsText: [],
       });
     }
-
     if (currentClass === "Cleric") {
       setState({
         ...state,

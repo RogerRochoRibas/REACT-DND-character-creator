@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { AppContext } from "../../appProvider";
-import ClassGearChoices from "./classGearChoices";
 import ClassProfChoices from "./classProfChoices";
 import ClassSkills from "./classSkills";
 import ClassGear from "./classGear";
@@ -64,14 +63,10 @@ const ClassShowcase = () => {
       <h2>{state.chosenClass}</h2>
       <h3>{subtitle}</h3>
       <p>Main Stat: {mainStat}</p>
-      <div>
-        <h4>Skills</h4>
-        <ClassSkills />
-        <h4>Proficiencies</h4>
+      <div className="classFeatures">
+        <ClassSkills/>
         <ClassProfChoices />
-        <h4>Starting Gear</h4>
         <ClassGear />
-        <ClassGearChoices />
       </div>
     </div>
   );

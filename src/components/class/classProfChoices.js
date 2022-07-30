@@ -5,7 +5,13 @@ const ClassProfChoices = () => {
   const [state, setState] = useContext(AppContext);
 
   return (
-    <><p>Your class allows you to chose some proficiencies.</p>
+    <div className="classProficiencies">
+      <h4>Proficiencies</h4>
+      <p>Your class allows you to chose some proficiencies.</p>
+      <p>
+        Proficiencies are things you excel at, giving you a bonus on your rolls
+        when using that particular skill.
+      </p>
       {state.profNumber > 0 && (
         <>
           <select
@@ -56,7 +62,7 @@ const ClassProfChoices = () => {
           </select>
         </>
       )}
-    </>
+    </div>
   );
 };
 export default ClassProfChoices;

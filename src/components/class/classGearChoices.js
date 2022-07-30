@@ -124,7 +124,10 @@ const ClassGearChoices = () => {
           name={"gearClassChoice" + choice}
           value={element.option1}
           onChange={(e) => {
-            setState({ ...state, ["gearClassChoice" + choice]: e.target.value });
+            setState({
+              ...state,
+              ["gearClassChoice" + choice]: e.target.value,
+            });
           }}
         />
         <label htmlFor={element.option1}>{element.option1}</label>
@@ -134,7 +137,10 @@ const ClassGearChoices = () => {
           name={"gearClassChoice" + choice}
           value={element.option2}
           onChange={(e) => {
-            setState({ ...state, ["gearClassChoice" + choice]: e.target.value });
+            setState({
+              ...state,
+              ["gearClassChoice" + choice]: e.target.value,
+            });
           }}
         />
         <label htmlFor={element.option2}>{element.option2}</label>
