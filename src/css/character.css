@@ -689,7 +689,7 @@ form.charsheet main section.attacksandspellcasting > div > table {
 }
 form.charsheet main section.attacksandspellcasting > div > table th {
   font-size: 10px;
-  color: rgb(131, 88, 88);
+  color: rgb(105, 105, 105);
 }
 form.charsheet main section.attacksandspellcasting > div > table input {
   width: calc(100% - 4px);
@@ -810,8 +810,9 @@ form.charsheet main section.features div ul {
   font-size:medium
 }
 .userData {
-  color:rgb(30, 30, 30);
+  background-color: rgba(255, 255, 255, 0);
 }
-.userData::placeholder {
-  color:rgb(255, 0, 0);
+
+input::placeholder {
+  color:rgb(68, 68, 68)!important;
 }

@@ -88,7 +88,14 @@ const ClassSelector = () => {
         selectedSkillOption: "",
         skillOptionsText: [],
         classWeapon1: "",
+        classWeapon1offhand: "",
+        classWeapon1second: "",
         classWeapon2: "",
+        classWeapon2offhand: "",
+        classWeapon2second: "",
+        classWeapon3: "",
+        classWeapon3offhand: "",
+        classWeapon3second: "",
        });
     }
     if (currentClass === "Bard") {
@@ -138,6 +145,15 @@ const ClassSelector = () => {
         skillOptions: [],
         selectedSkillOption: "",
         skillOptionsText: [],
+        classWeapon1: "",
+        classWeapon1offhand: "",
+        classWeapon1second: "",
+        classWeapon2: "",
+        classWeapon2offhand: "",
+        classWeapon2second: "",
+        classWeapon3: "",
+        classWeapon3offhand: "",
+        classWeapon3second: "",
       });
     }
     if (currentClass === "Cleric") {
@@ -179,7 +195,14 @@ const ClassSelector = () => {
         selectedSkillOption: "",
         skillOptionsText: [],
         classWeapon1: "",
+        classWeapon1offhand: "",
+        classWeapon1second: "",
         classWeapon2: "",
+        classWeapon2offhand: "",
+        classWeapon2second: "",
+        classWeapon3: "",
+        classWeapon3offhand: "",
+        classWeapon3second: "",
         subclass1Text: [
           "Arcane Initiate: When you choose this domain at 1st level, you gain proficiency in the Arcana skill, and you gain two cantrips of your choice from the wizard spell list. For you, these cantrips count as cleric cantrips.",
           "Arcana Domain Spells: At first level you learn: Detect Magic and Magic Missile",
@@ -307,7 +330,14 @@ const ClassSelector = () => {
           "Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier on a hit. If you aren't wielding any weapons or a shield when you make the attack roll, the d6 becomes a d8. At the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you",
         ],
         classWeapon1: "",
+        classWeapon1offhand: "",
+        classWeapon1second: "",
         classWeapon2: "",
+        classWeapon2offhand: "",
+        classWeapon2second: "",
+        classWeapon3: "",
+        classWeapon3offhand: "",
+        classWeapon3second: "",
       });
     }
     if (currentClass === "Monk") {
@@ -340,7 +370,14 @@ const ClassSelector = () => {
         selectedSkillOption: "",
         skillOptionsText: [],
         classWeapon1: "",
+        classWeapon1offhand: "",
+        classWeapon1second: "",
         classWeapon2: "",
+        classWeapon2offhand: "",
+        classWeapon2second: "",
+        classWeapon3: "",
+        classWeapon3offhand: "",
+        classWeapon3second: "",
       });
     }
     if (currentClass === "Rogue") {
@@ -384,7 +421,14 @@ const ClassSelector = () => {
         selectedSkillOption: "",
         skillOptionsText: [],
         classWeapon1: "",
+        classWeapon1offhand: "",
+        classWeapon1second: "",
         classWeapon2: "",
+        classWeapon2offhand: "",
+        classWeapon2second: "",
+        classWeapon3: "",
+        classWeapon3offhand: "",
+        classWeapon3second: "",
       });
     }
   }

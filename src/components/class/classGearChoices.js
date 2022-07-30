@@ -261,7 +261,7 @@ const ClassGearChoices = () => {
               </select>
             </div>
           )}
-          {state.gearClassChoice1 === "Any simple weapon" &&
+        {state.gearClassChoice1 === "Any simple weapon" &&
           element.option2 === "Any simple weapon" && (
             <div className="gearSubchoice">
               <select
@@ -276,7 +276,7 @@ const ClassGearChoices = () => {
               </select>
             </div>
           )}
-          {/*Fighter and Paladin weapon choices*/}
+        {/*Fighter and Paladin weapon choices*/}
         {state.gearClassChoice0 === "Martial weapon and shield" &&
           element.option1 === "Martial weapon and shield" && (
             <div className="gearSubchoice">
@@ -292,7 +292,7 @@ const ClassGearChoices = () => {
               </select>
             </div>
           )}
-          {state.gearClassChoice0 === "Two martial weapons" &&
+        {state.gearClassChoice0 === "Two martial weapons" &&
           element.option2 === "Two martial weapons" && (
             <div className="gearSubchoice">
               <select
@@ -317,7 +317,7 @@ const ClassGearChoices = () => {
               </select>
             </div>
           )}
-          {/*Druid, Monk, Sorcerer and Warlock first simple weapon choices*/}
+        {/*Druid, Monk, Sorcerer and Warlock first simple weapon choices*/}
         {state.gearClassChoice0 === "Any simple weapon" &&
           element.option2 === "Any simple weapon" && (
             <div className="gearSubchoice">
@@ -333,7 +333,7 @@ const ClassGearChoices = () => {
               </select>
             </div>
           )}
-          {/*Cleric simple weapon choices*/}
+        {/*Cleric simple weapon choices*/}
         {state.gearClassChoice1 === "Any simple weapon" &&
           element.option2 === "Any simple weapon" && (
             <div className="gearSubchoice">
@@ -349,7 +349,7 @@ const ClassGearChoices = () => {
               </select>
             </div>
           )}
-          {/*Druid and Paladin simple melee weapon choices*/}
+        {/*Druid and Paladin simple melee weapon choices*/}
         {state.gearClassChoice1 === "Any simple melee weapon" &&
           element.option2 === "Any simple melee weapon" && (
             <div className="gearSubchoice">
@@ -365,7 +365,7 @@ const ClassGearChoices = () => {
               </select>
             </div>
           )}
-          {/*Ranger two simple melee weapon choices*/}
+        {/*Ranger two simple melee weapon choices*/}
         {state.gearClassChoice1 === "Two simple melee weapons" &&
           element.option2 === "Two simple melee weapons" && (
             <div className="gearSubchoice">
@@ -380,26 +380,137 @@ const ClassGearChoices = () => {
                 ))}
               </select>
             </div>
-          )}          
-          {/*Bard instrument choices*/}
-          {state.gearClassChoice1 === "Any other musical instrument" &&
-            element.option2 === "Any other musical instrument" && (
-              <div className="gearSubchoice">
-                <select
-                  className="choseWeapon"
-                  onChange={(e) =>
-                    setState({ ...state, classWeapon2: e.target.value })
-                  }
-                >
-                  {instrumentOptions.map((x, y) => (
-                    <option key={y}>{x}</option>
-                  ))}
-                </select>
-              </div>
-            )}
+          )}
+        {/*Bard instrument choices*/}
+        {state.gearClassChoice1 === "Any other musical instrument" &&
+          element.option2 === "Any other musical instrument" && (
+            <div className="gearSubchoice">
+              <select
+                className="choseWeapon"
+                onChange={(e) =>
+                  setState({ ...state, classWeapon2: e.target.value })
+                }
+              >
+                {instrumentOptions.map((x, y) => (
+                  <option key={y}>{x}</option>
+                ))}
+              </select>
+            </div>
+          )}
       </div>
     );
   });
-  return gearOptionsMounted;
+
+  {
+    /*new barbarian choices*/
+  }
+  if (state.chosenClass === "Barbarian") {
+    return (
+      <>
+        <div>
+          <input
+            type="radio"
+            id="Greataxe"
+            name="gearClassChoice1"
+            value="Greataxe"
+            onChange={(e) => {
+              setState({
+                ...state,
+                gearClassChoice1: e.target.value,
+                classWeapon1: e.target.value,
+                gearClassChoice1list: false,
+              });
+            }}
+          />
+          <label htmlFor="Greataxe">Greataxe</label>
+          <input
+            type="radio"
+            id="Any martial melee weapon"
+            name="gearClassChoice1"
+            value="Any martial melee weapon"
+            onChange={(e) => {
+              setState({
+                ...state,
+                gearClassChoice1: "",
+                gearClassChoice1list: true,
+              });
+            }}
+          />
+          <label htmlFor="Any martial melee weapon">
+            Any martial melee weapon
+          </label>
+        </div>
+        {state.gearClassChoice1list === true && (
+          <div className="gearSubchoice">
+            <select
+              className="choseWeapon"
+              onChange={(e) =>
+                setState({
+                  ...state,
+                  gearClassChoice1: e.target.value,
+                  classWeapon1: e.target.value,
+                })
+              }
+            >
+              {martialMeleeWeaponOptions.map((x, y) => (
+                <option key={y}>{x}</option>
+              ))}
+            </select>
+          </div>
+        )}
+        <input
+          type="radio"
+          id="Two handaxes"
+          name="gearClassChoice2"
+          value="Two handaxes"
+          onChange={(e) => {
+            setState({
+              ...state,
+              gearClassChoice2: e.target.value,
+              classWeapon2: "Handaxe",
+              classWeapon2offhand: "Handaxe OH",
+              gearClassChoice2list: false,
+            });
+          }}
+        />
+        <label htmlFor="Two handaxes">Two handaxes</label>
+        <input
+          type="radio"
+          id="Any simple weapon"
+          name="gearClassChoice2"
+          value="Any simple weapon"
+          onChange={(e) => {
+            setState({
+              ...state,
+              gearClassChoice2: e.target.value,
+              classWeapon2: e.target.value,
+              classWeapon2offhand: "",
+              gearClassChoice2list: true,
+            });
+          }}
+        />
+        <label htmlFor="Any simple weapon">Any simple weapon</label>
+        {state.gearClassChoice2list === true && (
+          <div className="gearSubchoice">
+            <select
+              className="choseWeapon"
+              onChange={(e) =>
+                setState({
+                  ...state,
+                  gearClassChoice2: e.target.value,
+                  classWeapon2: e.target.value,
+                })
+              }
+            >
+              {simpleWeaponOptions.map((x, y) => (
+                <option key={y}>{x}</option>
+              ))}
+            </select>
+          </div>
+        )}
+      </>
+    );
+  }
 };
+
 export default ClassGearChoices;

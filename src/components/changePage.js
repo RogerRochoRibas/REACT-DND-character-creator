@@ -221,6 +221,29 @@ const ChangePage = () => {
     if (state.feature9) {features[11] = state.feature9};
     if (state.feature10) {features[12] = state.feature10};
     if (state.feature11) {features[13] = state.feature11};
+
+    var weaponList = []
+    if (state.classWeapon1 !== ""){
+    weaponList.push(state.classWeapon1)}
+    if (state.classWeapon1offhand !== ""){
+    weaponList.push(state.classWeapon1offhand)}
+    if (state.classWeapon1second !== ""){
+    weaponList.push(state.classWeapon1second)}
+    if (state.classWeapon2 !== ""){
+    weaponList.push(state.classWeapon2)}
+    if (state.classWeapon2offhand !== ""){
+    weaponList.push(state.classWeapon2offhand)}
+    if (state.classWeapon2second !== ""){
+    weaponList.push(state.classWeapon2second)}
+    if (state.classWeapon3 !== ""){
+    weaponList.push(state.classWeapon3)}
+    if (state.classWeapon3offhand !== ""){
+    weaponList.push(state.classWeapon3offhand)}
+    if (state.classWeapon3second !== ""){
+    weaponList.push(state.classWeapon3second)}
+
+    console.log("weaponList: ",weaponList)
+
     setState({
       ...state,
       hitPoints: hitPoints,
@@ -246,6 +269,7 @@ const ChangePage = () => {
       CHA: CHA,
       CHAsave: CHASaveSymbol + CHAsave,
       features: features,
+      weaponList: weaponList,
     });
   }
 

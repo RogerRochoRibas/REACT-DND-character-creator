@@ -4,6 +4,7 @@ import { ArmorClass, Initiative, Speed } from "./combatStats";
 import SavingThrows from "./savingThrows";
 import SkillChecks from "./skillChecks";
 import Features from "./features";
+import Attacks from "./attacks";
 
 const CharacterSheetContent = () => {
   const [state, setState] = useContext(AppContext);
@@ -61,7 +62,7 @@ const CharacterSheetContent = () => {
               <input
                 className="userData"
                 name="alignment"
-                placeholder="Lawful Good"
+                placeholder=""
               />
             </li>
             <li>
@@ -361,63 +362,7 @@ const CharacterSheetContent = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <input className="userData" name="atkname1" type="text" />
-                    </td>
-                    <td>
-                      <input
-                        className="userData"
-                        name="atkbonus1"
-                        type="text"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        className="userData"
-                        name="atkdamage1"
-                        type="text"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input className="userData" name="atkname2" type="text" />
-                    </td>
-                    <td>
-                      <input
-                        className="userData"
-                        name="atkbonus2"
-                        type="text"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        className="userData"
-                        name="atkdamage2"
-                        type="text"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input className="userData" name="atkname3" type="text" />
-                    </td>
-                    <td>
-                      <input
-                        className="userData"
-                        name="atkbonus3"
-                        type="text"
-                      />
-                    </td>
-                    <td>
-                      <input
-                        className="userData"
-                        name="atkdamage3"
-                        type="text"
-                      />
-                    </td>
-                  </tr>
+                  <Attacks/>
                 </tbody>
               </table>
               <textarea></textarea>
@@ -483,7 +428,7 @@ const CharacterSheetContent = () => {
             <div>
               <label htmlFor="features">Features & Traits</label>
               <ul>
-              <Features />
+                <Features />
               </ul>
             </div>
           </section>
