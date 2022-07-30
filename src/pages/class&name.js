@@ -10,6 +10,7 @@ const Class = () => {
         <NameInput />
         <div className="classList"><ClassSelector /></div>
         <ClassShowcase />
+        <ChangePage />
     </div>
   );
 };

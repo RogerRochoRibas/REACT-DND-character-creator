@@ -8,6 +8,7 @@ const Background = () => {
         <ChangePage />
         <BackgroundSelector />
         <BackgroundShowcase />
+        <ChangePage />
     </div>
   );
 };
