@@ -29,12 +29,6 @@ const ClassSelector = () => {
     { name: "Warlock", url: warlock },
     { name: "Wizard", url: wizard },
   ];
-  useEffect(() => {
-    let random = Math.floor(Math.random() * ClassList.length);
-    let randomClass = ClassList[random].name;
-    setState({ ...state, chosenClass: randomClass });
-  }, []);
-
   let classesMounted = ClassList.map((element, key) => {
     return (
       <div className="classOption" key={key}>
@@ -148,7 +142,7 @@ const ClassSelector = () => {
         classWeapon1: "",
         classWeapon1offhand: "",
         classWeapon1second: "",
-        classWeapon2: "",
+        classWeapon2: "Dagger",
         classWeapon2offhand: "",
         classWeapon2second: "",
         classWeapon3: "",

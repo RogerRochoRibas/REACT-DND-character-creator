@@ -3,12 +3,13 @@ import { AppContext } from "../../appProvider";
 import ClassProfChoices from "./classProfChoices";
 import ClassSkills from "./classSkills";
 import ClassGear from "./classGear";
+import ChangePage from "../changePage";
 
 const ClassShowcase = () => {
   const [state, setState] = useContext(AppContext);
-  var mainStat = ""
-  var subtitle = ""
-  
+  var mainStat = "";
+  var subtitle = "";
+
   if (state.chosenClass === "Barbarian") {
     mainStat = "Strength";
     subtitle = "Both Unstoppable Force and Immovable Object";
@@ -57,19 +58,21 @@ const ClassShowcase = () => {
     mainStat = "Intelligence";
     subtitle = "Raw Magical Prowess";
   }
-  
-  return (
-    <div id="classShowcase">
-      <h2>{state.chosenClass}</h2>
-      <h3>{subtitle}</h3>
-      <p>Main Stat: {mainStat}</p>
-      <div className="classFeatures">
-        <ClassSkills/>
-        <ClassProfChoices />
-        <ClassGear />
+  if (state.chosenClass !== undefined) {
+    return (
+      <div id="classShowcase">
+        <h2>{state.chosenClass}</h2>
+        <h3>{subtitle}</h3>
+        <p>Main Stat: {mainStat}</p>
+        <div className="classFeatures">
+          <ClassSkills />
+          <ClassProfChoices />
+          <ClassGear />
+          <ChangePage />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default ClassShowcase;

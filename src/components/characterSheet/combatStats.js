@@ -17,17 +17,20 @@ export const ArmorClass = () => {
     AC = 11 + Number(state.DEXmodifier);
   }
   // Cleric, Ranger
-  if (state.chosenClass === "Cleric" || state.chosenClass === "Ranger") {
-    if (state.choice1 === "Scale mail") {
+  if (state.chosenClass === "Cleric") {
+    if (state.gearClassChoice2 === "Scale mail") {
       AC = 14 + state.ACmodifier;
       if (state.ACmodifier > 2) {
         AC = 16;
       }
     }
-    if (state.choice0 === "Leather armor") {
+    if (state.gearClassChoice2 === "Leather armor") {
       AC = 11 + state.ACmodifier;
     }
-    if (!state.choice0) {
+    if (state.gearClassChoice2 === "Chain Mail") {
+      AC = 16;
+    }
+    if (!state.gearClassChoice2) {
       AC = 10 + state.ACmodifier;
     }
   }
