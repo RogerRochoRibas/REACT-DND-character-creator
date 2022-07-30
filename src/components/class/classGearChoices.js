@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { AppContext } from "../../appProvider";
-import { BarbarianGear } from "./classSpecifics/barbarianGear";
-import { BardGear } from "./classSpecifics/bardGear";
-import { ClericGear } from "./classSpecifics/clericGear";
+import { BarbarianGear } from "./classGear/barbarianGear";
+import { BardGear } from "./classGear/bardGear";
+import { ClericGear } from "./classGear/clericGear";
+import { DruidGear } from "./classGear/druidGear";
 
 const ClassGearChoices = () => {
   const [state, setState] = useContext(AppContext);
@@ -14,6 +15,9 @@ const ClassGearChoices = () => {
   }
   if (state.chosenClass === "Cleric") {
     return (<ClericGear/>);
+  }
+  if (state.chosenClass === "Druid") {
+    return (<DruidGear/>);
   }
 };
 

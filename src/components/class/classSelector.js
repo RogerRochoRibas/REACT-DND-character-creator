@@ -267,6 +267,48 @@ const ClassSelector = () => {
         ],
       });
     }
+    if (currentClass === "Druid") {
+      setState({
+        ...state,
+        chosenClass: "Druid",
+        classHitPoints: 8,
+        hitDice: "1d8",
+        armorProf: ["Light Armor", "Medium Armor", "Shields"],
+        weaponProf: ["Clubs", "Daggers","Darts","Javelins","Maces","Quarterstaffs","Scimitars","Sickles","Slings","Spears"],
+        basicClassGear: "Leather armor, an explorer's pack, and a druidic focus",
+        tools: "Herbalism Kit",
+        skillProf: [
+          "--",
+          "Arcana",
+          "Animal Handling",
+          "Insight",
+          "Medicine",
+          "Nature",
+          "Perception",
+          "Religion",
+          "Survival",
+        ],
+        profNumber: 2,
+        classProf1: "",
+        classProf2: "",
+        classProf3: "",
+        classProf4: "",
+        classSkill1: "Druidic",
+        classSkill2: "Spellcasting",
+        skillOptions: [],
+        selectedSkillOption: "",
+        skillOptionsText: [],
+        classWeapon1: "",
+        classWeapon1offhand: "",
+        classWeapon1second: "",
+        classWeapon2: "",
+        classWeapon2offhand: "",
+        classWeapon2second: "",
+        classWeapon3: "",
+        classWeapon3offhand: "",
+        classWeapon3second: "",
+       });
+    }
     if (currentClass === "Fighter") {
       setState({
         ...state,

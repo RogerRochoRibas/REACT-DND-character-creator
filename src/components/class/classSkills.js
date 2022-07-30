@@ -306,6 +306,88 @@ const ClassSkills = () => {
       </div>
     );
   }
+
+  if (state.chosenClass === "Druid") {
+    return (
+      <div className="skillsContainer">
+        <div className="skill">
+          <h4>Druidic</h4>
+          <p>
+            You know Druidic, the secret language of druids. You can speak the
+            language and use it to leave hidden messages. You and others who
+            know this language automatically spot such a message. Others spot
+            the message's presence with a successful DC 15 Wisdom (Perception)
+            check but can't decipher it without magic.
+          </p>
+        </div>
+        <div className="skill">
+          <h4>Spellcasting</h4>
+          <p>
+            Drawing on the divine essence of nature itself, you can cast spells
+            to shape that essence to your will.
+          </p>
+          <h5>Cantrips</h5>
+          <p>
+            At 1st level, you know two cantrips of your choice from the druid
+            spell list. You learn additional druid cantrips of your choice at
+            level 4 and 10.
+          </p>
+          <h5>Spells</h5>
+          <p>
+            The Druid table shows how many spell slots you have to cast your
+            druid spells of 1st level and higher. To cast one of these druid
+            spells, you must expend a slot of the spell's level or higher. You
+            regain all expended spell slots when you finish a long rest.
+          </p>
+          <p>
+            You prepare the list of druid spells that are available for you to
+            cast, choosing from the druid spell list. When you do so, choose a
+            number of druid spells equal to your Wisdom modifier + your druid
+            level (minimum of one spell). The spells must be of a level for
+            which you have spell slots.
+          </p>
+          <p>
+            You can also change your list of prepared spells when you finish a
+            long rest. Preparing a new list of druid spells requires time spent
+            in prayer and meditation: at least 1 minute per spell level for each
+            spell on your list.
+          </p>
+          <h5>Spell Slots</h5>
+          <p>
+            To cast a Spell (not a Cantrip) you consume a Spell Slot. At level 1
+            you have 2 1st-level Spell Slots and recover all of them with a Long
+            Rest.
+          </p>
+          <h5>Spellcasting Ability</h5>
+          <p>
+            Wisdom is your spellcasting ability for your druid spells, since
+            your magic draws upon your devotion and attunement to nature. You
+            use your Wisdom whenever a spell refers to your spellcasting
+            ability. In addition, you use your Wisdom modifier when setting the
+            saving throw DC for a druid spell you cast and when making an attack
+            roll with one.
+          </p>
+          <p>
+            Spell save DC = 8 + your proficiency bonus + your Wisdom modifier
+          </p>
+          <p>
+            Spell attack modifier = your proficiency bonus + your Wisdom
+            modifier
+          </p>
+          <h5>Ritual Casting</h5>
+          <p>
+            You can cast a druid spell as a ritual if that spell has the ritual
+            tag and you have the spell prepared.
+          </p>
+          <h5>Spellcasting Focus</h5>
+          <p>
+            You can use a druidic focus as a spellcasting focus for your druid
+            spells.{" "}
+          </p>
+        </div>
+      </div>
+    );
+  }
   if (state.chosenClass === "Fighter") {
     return (
       <div className="skillsContainer">

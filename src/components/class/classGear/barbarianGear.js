@@ -84,8 +84,8 @@ export const BarbarianGear = () => {
         onChange={(e) => {
           setState({
             ...state,
-            gearClassChoice2: e.target.value,
-            classWeapon2: e.target.value,
+            gearClassChoice2: "",
+            classWeapon2: "",
             classWeapon2offhand: "",
             gearClassChoice2list: true,
           });
