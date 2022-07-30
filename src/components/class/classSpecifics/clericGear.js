@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../../../appProvider";
-import PriestExtraChoice1 from "./priestExtraChoice1";
-import PriestExtraChoice2 from "./priestExtraChoice2";
+import PriestExtraChoice1 from "./clericExtraChoice1";
+import PriestExtraChoice2 from "./clericExtraChoice2";
 import {
   simpleWeaponOptions,
 } from "../data/weaponTypes,";
