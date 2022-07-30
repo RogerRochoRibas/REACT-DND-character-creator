@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { AppContext } from "../../appProvider";
+import AttackBonus from "./resources/attackBonus";
 
 const Attacks = () => {
   const [state, setState] = useContext(AppContext);
   let attacksList = state.weaponList.map((e, i) => {
+    let attackBonus = AttackBonus(e)
     return (
       <tr key={e+i}>
         <td>
@@ -17,9 +19,10 @@ const Attacks = () => {
         </td>
         <td>
           <input
-            className="userData"
+            className="userData attackBonus"
             name={"atkbonus" + i}
             type="text"
+            placeholder={attackBonus}
             disabled
           />
         </td>

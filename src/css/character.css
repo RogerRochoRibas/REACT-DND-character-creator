@@ -698,6 +698,9 @@ form.charsheet main section.attacksandspellcasting > div > table input {
   font-size: 10px;
   padding: 3px;
 }
+.attackBonus::placeholder {
+  text-align: center;
+}
 form.charsheet main section.attacksandspellcasting > div textarea {
   background: rgba(255, 255, 255, 0);
   border: 0;

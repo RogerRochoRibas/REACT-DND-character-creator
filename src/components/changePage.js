@@ -241,9 +241,7 @@ const ChangePage = () => {
     weaponList.push(state.classWeapon3offhand)}
     if (state.classWeapon3second !== ""){
     weaponList.push(state.classWeapon3second)}
-
-    console.log("weaponList: ",weaponList)
-
+    
     setState({
       ...state,
       hitPoints: hitPoints,
