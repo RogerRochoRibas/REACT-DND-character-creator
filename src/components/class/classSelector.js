@@ -87,7 +87,7 @@ const ClassSelector = () => {
         skillOptions: [],
         selectedSkillOption: "",
         skillOptionsText: [],
-      });
+       });
     }
     if (currentClass === "Bard") {
       setState({
