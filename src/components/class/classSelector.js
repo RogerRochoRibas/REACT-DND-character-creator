@@ -90,7 +90,7 @@ const ClassSelector = () => {
         classWeapon3: "",
         classWeapon3offhand: "",
         classWeapon3second: "",
-       });
+      });
     }
     if (currentClass === "Bard") {
       setState({
@@ -160,7 +160,14 @@ const ClassSelector = () => {
         weaponProf: ["Simple Weapons"],
         basicClassGear: "A shield and a holy simbol",
         tools: false,
-        skillProf: ["History", "Insight", "Medicine", "Persuasion", "Religion"],
+        skillProf: [
+          "--",
+          "History",
+          "Insight",
+          "Medicine",
+          "Persuasion",
+          "Religion",
+        ],
         profNumber: 2,
         classProf1: "",
         classProf2: "",
@@ -274,8 +281,20 @@ const ClassSelector = () => {
         classHitPoints: 8,
         hitDice: "1d8",
         armorProf: ["Light Armor", "Medium Armor", "Shields"],
-        weaponProf: ["Clubs", "Daggers","Darts","Javelins","Maces","Quarterstaffs","Scimitars","Sickles","Slings","Spears"],
-        basicClassGear: "Leather armor, an explorer's pack, and a druidic focus",
+        weaponProf: [
+          "Clubs",
+          "Daggers",
+          "Darts",
+          "Javelins",
+          "Maces",
+          "Quarterstaffs",
+          "Scimitars",
+          "Sickles",
+          "Slings",
+          "Spears",
+        ],
+        basicClassGear:
+          "Leather armor, an explorer's pack, and a druidic focus",
         tools: "Herbalism Kit",
         skillProf: [
           "--",
@@ -307,7 +326,7 @@ const ClassSelector = () => {
         classWeapon3: "",
         classWeapon3offhand: "",
         classWeapon3second: "",
-       });
+      });
     }
     if (currentClass === "Fighter") {
       setState({

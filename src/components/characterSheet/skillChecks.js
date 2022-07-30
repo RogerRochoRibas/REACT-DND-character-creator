@@ -20,7 +20,7 @@ const SkillChecks = () => {
     "Persuasion",
     "Religion",
     "Sleight of Hand",
-    "Stalth",
+    "Stealth",
     "Survival",
   ];
   let profValues = state.profValues;

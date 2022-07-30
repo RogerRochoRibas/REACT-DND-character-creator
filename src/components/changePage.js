@@ -188,7 +188,7 @@ const ChangePage = () => {
       "Persuasion",
       "Religion",
       "Sleight of Hand",
-      "Stalth",
+      "Stealth",
       "Survival",
     ];
     let profValues = [];
