@@ -66,6 +66,7 @@ export const ClericGear = () => {
             setState({
               ...state,
               gearClassChoice3: e.target.value,
+              gearClassChoice3list: false,
             });
           }}
         />
@@ -102,6 +103,34 @@ export const ClericGear = () => {
             </select>
           </div>
         )}
+      </div>
+      <div>
+        <input
+          type="radio"
+          id="Priest's Pack"
+          name="gearClassChoice4"
+          value="Priest's Pack"
+          onChange={(e) => {
+            setState({
+              ...state,
+              gearClassChoice4: e.target.value,
+            });
+          }}
+        />
+        <label htmlFor="Priest's Pack">Priest's Pack</label>
+        <input
+          type="radio"
+          id="Explorer's Pack"
+          name="gearClassChoice4"
+          value="Explorer's Pack"
+          onChange={(e) => {
+            setState({
+              ...state,
+              gearClassChoice4: e.target.value,
+            });
+          }}
+        />
+        <label htmlFor="Explorer's Pack">Explorer's Pack</label>
       </div>
     </>
   ) }
