@@ -433,20 +433,20 @@ const CharacterSheetContent = () => {
                     <input className="userData" name="cp" />
                   </li>
                   <li>
-                    <label htmlFor="sp">cp</label>
-                    <input className="userData" name="cp" />
+                    <label htmlFor="sp">sp</label>
+                    <input className="userData" name="sp" />
                   </li>
                   <li>
-                    <label htmlFor="ep">cp</label>
-                    <input className="userData" name="cp" />
+                    <label htmlFor="ep">ep</label>
+                    <input className="userData" name="ep" />
                   </li>
                   <li>
-                    <label htmlFor="gp">cp</label>
-                    <input className="userData" name="cp" />
+                    <label htmlFor="gp">gp</label>
+                    <input className="userData" name="gp" />
                   </li>
                   <li>
-                    <label htmlFor="pp">cp</label>
-                    <input className="userData" name="cp" />
+                    <label htmlFor="pp">pp</label>
+                    <input className="userData" name="pp" />
                   </li>
                 </ul>
               </div>
