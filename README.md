@@ -15,7 +15,7 @@
     <img src="/src/img/dnd-logo.png" alt="Dungeons and Dragon Logo">
   </a>
 
-<h3 align="center">Musicaster</h3>
+<h3 align="center">DND Character Creator</h3>
 
   <p align="center">
   DND Character Creator aims to facilitate the creation of a Dungeons and Dragons level 1 character to new players, while including every option available within the rules.
@@ -150,7 +150,9 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Roger Rocho - [LinkedIn](https://es.linkedin.com/in/rogerrochoribas) - rogerrochoribas@gmail.com
+Roger Rocho:
+[LinkedIn](https://es.linkedin.com/in/rogerrochoribas)
+Email: rogerrochoribas@gmail.com
 
 Project Link: [https://github.com/RogerRochoRibas/REACT-DND-character-creator](https://github.com/RogerRochoRibas/REACT-DND-character-creator)
 
