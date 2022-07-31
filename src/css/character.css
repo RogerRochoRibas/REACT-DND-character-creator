@@ -757,7 +757,8 @@ form.charsheet main section.equipment > div > label {
 .chosenGear {
   max-width: 150px;
   margin:5px;
-  font-size: 0.9em;
+  margin-left: 15px;
+  font-size: 12px;
 }
 .chosenGear p{
   margin-top: 3px;

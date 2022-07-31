@@ -5,6 +5,7 @@ import SavingThrows from "./savingThrows";
 import SkillChecks from "./skillChecks";
 import Features from "./features";
 import Attacks from "./attacks";
+import ChosenGear from "./resources/chosenGear";
 
 const CharacterSheetContent = () => {
   const [state, setState] = useContext(AppContext);
@@ -396,10 +397,7 @@ const CharacterSheetContent = () => {
                 </ul>
               </div>
               <div className="chosenGear">
-                <p>{state.gearClassChoice0}</p>
-                <p>{state.gearClassChoice1}</p>
-                <p>{state.gearClassChoice2}</p>
-                <p>{state.gearClassChoice3}</p>
+                <ChosenGear />
                 <p>{state.basicClassGear}</p>
               </div>
             </div>
