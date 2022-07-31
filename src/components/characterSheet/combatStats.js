@@ -78,7 +78,26 @@ export const ArmorClass = () => {
       AC = 17
     }
   }
-
+  if (state.shield) {
+    AC = (AC)+"/"+(Number(AC)+2)
+  }
+  if (state.shield) {
+  return (
+    <div className="armorclass">
+      <div>
+        <label htmlFor="armorclass">Armor Class</label>
+        <input
+          className="userData shield"
+          name="armorclass"
+          placeholder={AC}
+          type="text"
+          disabled
+        />
+      </div>
+    </div>
+  );
+};
+if (!state.shield) {
   return (
     <div className="armorclass">
       <div>
@@ -93,8 +112,8 @@ export const ArmorClass = () => {
       </div>
     </div>
   );
-};
-
+}
+}
 export const Initiative = () => {
   const [state, setState] = useContext(AppContext);
   let modifier = state.DEXmodifier;

@@ -20,6 +20,7 @@ export const DruidGear = () => {
               ...state,
               gearClassChoice1: e.target.value,
               gearClassChoice1list: false,
+              shield:true,
               classWeapon1: "",
             });
           }}
@@ -34,6 +35,7 @@ export const DruidGear = () => {
             setState({
               ...state,
               gearClassChoice1list: true,
+              shield: false,
             });
           }}
         />

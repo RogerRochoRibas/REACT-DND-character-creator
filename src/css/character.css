@@ -461,6 +461,11 @@ form.charsheet main section.combat > div.speed > div input {
   text-align: center;
   font-size: 25px;
 }
+form.charsheet main section.combat > div.armorclass > div .shield {
+  background-image: url(../img/shield.jpg);
+  background-position: 47px 47px;
+  background-repeat: no-repeat;
+}
 form.charsheet main section.combat > div.hp {
   flex-basis: 100%;
 }

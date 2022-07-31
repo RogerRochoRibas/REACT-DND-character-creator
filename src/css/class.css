@@ -25,15 +25,15 @@ input[type="radio"]:checked+label div {
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  max-width: 700px;
+  max-width: 1000px;
 }
 
 .classImage {
   display: inline-block;
   position: relative;
-  width: 120px;
-  min-width: 120px;
-  height: 120px;
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
   border-radius: 30%;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
