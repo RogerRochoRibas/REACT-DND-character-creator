@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../appProvider";
+import CalculateRaceFreeStats from "./resources/addRaceFreeStats";
 
 const ChangePage = () => {
   const [state, setState] = useContext(AppContext);
@@ -210,38 +211,69 @@ const ChangePage = () => {
       features[1] = state.classSkill1;
     }
     features[2] = state.classSkill2;
-    if (state.feature1) {features[3] = state.feature1};
-    if (state.feature2) {features[4] = state.feature2};
-    if (state.feature3) {features[5] = state.feature3};
-    if (state.feature4) {features[6] = state.feature4};
-    if (state.feature5) {features[7] = state.feature5};
-    if (state.feature6) {features[8] = state.feature6};
-    if (state.feature7) {features[9] = state.feature7};
-    if (state.feature8) {features[10] = state.feature8};
-    if (state.feature9) {features[11] = state.feature9};
-    if (state.feature10) {features[12] = state.feature10};
-    if (state.feature11) {features[13] = state.feature11};
+    if (state.feature1) {
+      features[3] = state.feature1;
+    }
+    if (state.feature2) {
+      features[4] = state.feature2;
+    }
+    if (state.feature3) {
+      features[5] = state.feature3;
+    }
+    if (state.feature4) {
+      features[6] = state.feature4;
+    }
+    if (state.feature5) {
+      features[7] = state.feature5;
+    }
+    if (state.feature6) {
+      features[8] = state.feature6;
+    }
+    if (state.feature7) {
+      features[9] = state.feature7;
+    }
+    if (state.feature8) {
+      features[10] = state.feature8;
+    }
+    if (state.feature9) {
+      features[11] = state.feature9;
+    }
+    if (state.feature10) {
+      features[12] = state.feature10;
+    }
+    if (state.feature11) {
+      features[13] = state.feature11;
+    }
 
-    var weaponList = []
-    if (state.classWeapon1 !== ""){
-    weaponList.push(state.classWeapon1)}
-    if (state.classWeapon1offhand !== ""){
-    weaponList.push(state.classWeapon1offhand)}
-    if (state.classWeapon1second !== ""){
-    weaponList.push(state.classWeapon1second)}
-    if (state.classWeapon2 !== ""){
-    weaponList.push(state.classWeapon2)}
-    if (state.classWeapon2offhand !== ""){
-    weaponList.push(state.classWeapon2offhand)}
-    if (state.classWeapon2second !== ""){
-    weaponList.push(state.classWeapon2second)}
-    if (state.classWeapon3 !== ""){
-    weaponList.push(state.classWeapon3)}
-    if (state.classWeapon3offhand !== ""){
-    weaponList.push(state.classWeapon3offhand)}
-    if (state.classWeapon3second !== ""){
-    weaponList.push(state.classWeapon3second)}
-    
+    var weaponList = [];
+    if (state.classWeapon1 !== "") {
+      weaponList.push(state.classWeapon1);
+    }
+    if (state.classWeapon1offhand !== "") {
+      weaponList.push(state.classWeapon1offhand);
+    }
+    if (state.classWeapon1second !== "") {
+      weaponList.push(state.classWeapon1second);
+    }
+    if (state.classWeapon2 !== "") {
+      weaponList.push(state.classWeapon2);
+    }
+    if (state.classWeapon2offhand !== "") {
+      weaponList.push(state.classWeapon2offhand);
+    }
+    if (state.classWeapon2second !== "") {
+      weaponList.push(state.classWeapon2second);
+    }
+    if (state.classWeapon3 !== "") {
+      weaponList.push(state.classWeapon3);
+    }
+    if (state.classWeapon3offhand !== "") {
+      weaponList.push(state.classWeapon3offhand);
+    }
+    if (state.classWeapon3second !== "") {
+      weaponList.push(state.classWeapon3second);
+    }
+
     setState({
       ...state,
       hitPoints: hitPoints,
@@ -286,7 +318,9 @@ const ChangePage = () => {
         <button className="navButton">Background</button>
       </Link>
       <Link to="/CharacterSheet">
-        <button className="navButton" onClick={() => calculateSheet()}>Character</button>
+        <button className="navButton" onClick={() => calculateSheet()}>
+          Character
+        </button>
       </Link>
     </div>
   );

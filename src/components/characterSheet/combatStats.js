@@ -72,6 +72,12 @@ export const ArmorClass = () => {
   if (state.chosenClass === "Sorcerer" || state.chosenClass === "Wizard") {
     AC = 10 + state.ACmodifier;
   }
+  // Tortle race
+  if (state.race === "Tortle") {
+    if (AC < 17) {
+      AC = 17
+    }
+  }
 
   return (
     <div className="armorclass">

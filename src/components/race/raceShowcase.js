@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../appProvider";
+import RacePointSelector from "./resources/statPointSelector";
 
 const RaceShowcase = () => {
   const [state, setState] = useContext(AppContext);
@@ -75,7 +76,9 @@ const RaceShowcase = () => {
           {strText} {dexText} {conText} {intText} {wisText}
           {chaText} {freeStatText}
         </span>
+        <RacePointSelector />
       </p>
+      <ProficiencyOptions />
       <p>
         <span>Size:</span> <span>{state.volume}</span>
       </p>
@@ -123,7 +126,6 @@ const RaceShowcase = () => {
         <span>{state.feature11}</span>
         <span>{state.feature11text}</span>
       </p>
-      <ProficiencyOptions />
     </div>
   );
 };
@@ -135,6 +137,7 @@ const ProficiencyOptions = () => {
     <>
       {state.raceProfChoice1 && (
         <>
+          <h4>Your race allows you to chose Proficiencies:</h4>
           <select
             onChange={(e) => {
               setState({ ...state, classProf1: e.target.value });
@@ -147,19 +150,18 @@ const ProficiencyOptions = () => {
         </>
       )}
       {state.raceProfChoice2 && (
-          <>
-            <select
-              onChange={(e) => {
-                setState({ ...state, classProf2: e.target.value });
-              }}
-            >
-              {state.raceProfOptions2.map((x, y) => (
-                <option key={y}>{x}</option>
-              ))}
-            </select>
-          </>
-        )
-      }
+        <>
+          <select
+            onChange={(e) => {
+              setState({ ...state, classProf2: e.target.value });
+            }}
+          >
+            {state.raceProfOptions2.map((x, y) => (
+              <option key={y}>{x}</option>
+            ))}
+          </select>
+        </>
+      )}
     </>
   );
 };
