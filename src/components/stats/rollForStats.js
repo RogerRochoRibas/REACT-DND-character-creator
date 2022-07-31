@@ -170,7 +170,7 @@ const SelectRolled = (props) => {
         }
         setState({
           ...state,
-          [props.value]: [e.target.value],
+          [props.value]: Number([e.target.value]),
           [props.option]: selectedIndex,
         });
       }}
