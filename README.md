@@ -152,6 +152,7 @@ Don't forget to give the project a star! Thanks again!
 
 Roger Rocho:
 [LinkedIn](https://es.linkedin.com/in/rogerrochoribas)
+
 Email: rogerrochoribas@gmail.com
 
 Project Link: [https://github.com/RogerRochoRibas/REACT-DND-character-creator](https://github.com/RogerRochoRibas/REACT-DND-character-creator)
