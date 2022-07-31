@@ -49,8 +49,5 @@ export default function AttackBonus(e) {
   ) {
     attackBonus = Number(state.DEXmodifier) + 2;
   }
-  if (attackBonus > 0) {
-    attackModifier = "+" + String(attackBonus);
-  }
-  return attackModifier;
+  return attackBonus;
 }

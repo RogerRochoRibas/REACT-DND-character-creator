@@ -70,7 +70,6 @@ export const BarbarianGear = () => {
             ...state,
             gearClassChoice2: e.target.value,
             classWeapon2: "Handaxe",
-            classWeapon2offhand: "Handaxe OH",
             gearClassChoice2list: false,
           });
         }}
@@ -86,7 +85,6 @@ export const BarbarianGear = () => {
             ...state,
             gearClassChoice2: "",
             classWeapon2: "",
-            classWeapon2offhand: "",
             gearClassChoice2list: true,
           });
         }}
