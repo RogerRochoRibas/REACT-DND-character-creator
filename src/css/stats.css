@@ -1,0 +1,9 @@
+select {
+    min-width: 80px;
+    min-height: 30px;
+    text-align: center;
+    cursor:pointer;
+}
+select option {
+    font-size: large;
+}
