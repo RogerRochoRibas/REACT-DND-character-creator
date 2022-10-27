@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/DND-character-creator/static/css/main.108039d9.css",
+    "main.js": "/DND-character-creator/static/js/main.43979c4f.js",
+    "static/media/barbarian.png": "/DND-character-creator/static/media/barbarian.7f1d739877be1f4d51ba.png",
+    "static/media/warlock.png": "/DND-character-creator/static/media/warlock.226f8c977cac8fe7d56d.png",
+    "static/media/rogue.png": "/DND-character-creator/static/media/rogue.4ba429bc147dc52c03c6.png",
+    "static/media/paladin.png": "/DND-character-creator/static/media/paladin.2654b616732a2a5dc337.png",
+    "static/media/ranger.png": "/DND-character-creator/static/media/ranger.5450f73c42b9bf735300.png",
+    "static/media/wizard.png": "/DND-character-creator/static/media/wizard.17ede0135c2ef130798e.png",
+    "static/media/sorcerer.png": "/DND-character-creator/static/media/sorcerer.b4ad8f91928bf255f11c.png",
+    "static/media/cleric.png": "/DND-character-creator/static/media/cleric.c10e28ec7bd488400116.png",
+    "static/media/bard.png": "/DND-character-creator/static/media/bard.13ed4a42d53519d59c4d.png",
+    "static/media/druid.png": "/DND-character-creator/static/media/druid.6420c9e2d31eb49443e1.png",
+    "static/media/monk.png": "/DND-character-creator/static/media/monk.64b771a802d6567ab348.png",
+    "static/media/fighter.png": "/DND-character-creator/static/media/fighter.baa2d72676a4d2693611.png",
+    "static/media/crumbled-paper.jpg": "/DND-character-creator/static/media/crumbled-paper.a375d5462c96ff23f7f0.jpg",
+    "index.html": "/DND-character-creator/index.html",
+    "main.108039d9.css.map": "/DND-character-creator/static/css/main.108039d9.css.map",
+    "main.43979c4f.js.map": "/DND-character-creator/static/js/main.43979c4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.108039d9.css",
+    "static/js/main.43979c4f.js"
+  ]
+}
