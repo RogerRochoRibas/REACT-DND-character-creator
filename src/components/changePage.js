@@ -305,19 +305,19 @@ const ChangePage = () => {
 
   return (
     <div>
-      <Link to="/">
+      <Link to="/REACT-DND-character-creator/">
         <button className="navButton">Class</button>
       </Link>
-      <Link to="/stats">
+      <Link to="/REACT-DND-character-creator/stats">
         <button className="navButton">Stats</button>
       </Link>
-      <Link to="/race">
+      <Link to="/REACT-DND-character-creator/race">
         <button className="navButton">Race</button>
       </Link>
-      <Link to="/background">
+      <Link to="/REACT-DND-character-creator/background">
         <button className="navButton">Background</button>
       </Link>
-      <Link to="/CharacterSheet">
+      <Link to="/REACT-DND-character-creator/CharacterSheet">
         <button className="navButton" onClick={() => calculateSheet()}>
           Character
         </button>

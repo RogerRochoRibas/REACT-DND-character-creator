@@ -3,7 +3,6 @@ import { AppContext } from "../../appProvider";
 
 const BackgroundShowcase = () => {
   const [state, setState] = useContext(AppContext);
-  let chosenBackground = "";
   let backgroundProf1 = "";
   let backgroundProf2 = "";
   let languages = "";
@@ -12,7 +11,6 @@ const BackgroundShowcase = () => {
   let bgFeatureText = "";
 
   if (state.background === "Acolyte") {
-    chosenBackground = "Acolyte";
     backgroundProf1 = "Insight";
     backgroundProf2 = "Religion";
     languages = "Two of your choice";
@@ -24,15 +22,23 @@ const BackgroundShowcase = () => {
   }
 
   return (
-    <div>
+    <div className="classFeatures Showcase">
       <h2>{state.background}</h2>
-      <p>
-        Proficiencies: {backgroundProf1}, {backgroundProf2}
-      </p>
-      <p>Languages: {languages}</p>
-      <p>Equipment: {bgEquipment}</p>
-      <h3>{bgFeatureName}</h3>
-      <p>{bgFeatureText}</p>
+      <div className="classProficiencies">
+        {state.background ? (
+          <>
+            <p>
+              Proficiencies: {backgroundProf1}, {backgroundProf2}
+            </p>
+            <p>Languages: {languages}</p>
+            <p>Equipment: {bgEquipment}</p>
+            <h3>{bgFeatureName}</h3>
+            <p>{bgFeatureText}</p>
+          </>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 };

@@ -60,7 +60,7 @@ const ClassShowcase = () => {
   }
   if (state.chosenClass !== undefined) {
     return (
-      <div id="classShowcase">
+      <div className="Showcase">
         <h2>{state.chosenClass}</h2>
         <h3>{subtitle}</h3>
         <p>Main Stat: {mainStat}</p>

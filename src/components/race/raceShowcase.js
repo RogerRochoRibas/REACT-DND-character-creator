@@ -68,64 +68,72 @@ const RaceShowcase = () => {
     freeStatText =
       "You can add 3 points to your stats (with no more than 2 on the same ability score).";
   return (
-    <div className="classFeatures">
+    <div className="classFeatures Showcase">
       <h2>{state.race}</h2>
-      <p>
-        <span>Ability Scores:</span>
-        <span>
-          {strText} {dexText} {conText} {intText} {wisText}
-          {chaText} {freeStatText}
-        </span>
-        <RacePointSelector />
-      </p>
-      <ProficiencyOptions />
-      <p>
-        <span>Size:</span> <span>{state.volume}</span>
-      </p>
-      <p>
-        <span>{state.feature1}</span>
-        <span>{state.feature1text}</span>
-      </p>
-      <p>
-        <span>{state.feature2}</span>
-        <span>{state.feature2text}</span>
-      </p>
-      <p>
-        <span>{state.feature3}</span>
-        <span>{state.feature3text}</span>
-      </p>
-      <p>
-        <span>{state.feature4}</span>
-        <span>{state.feature4text}</span>
-      </p>
-      <p>
-        <span>{state.feature5}</span>
-        <span>{state.feature5text}</span>
-      </p>
-      <p>
-        <span>{state.feature6}</span>
-        <span>{state.feature6text}</span>
-      </p>
-      <p>
-        <span>{state.feature7}</span>
-        <span>{state.feature7text}</span>
-      </p>
-      <p>
-        <span>{state.feature8}</span>
-        <span>{state.feature8text}</span>
-      </p>
-      <p>
-        <span>{state.feature9}</span>
-        <span>{state.feature9text}</span>
-      </p>
-      <p>
-        <span>{state.feature10}</span>
-        <span>{state.feature10text}</span>
-      </p>
-      <p>
-        <span>{state.feature11}</span>
-        <span>{state.feature11text}</span>
-      </p>
+      {state.race ? (
+        <>
+          <div className="classProficiencies">
+            <p>
+              <span>Ability Scores:</span>
+              <span>
+                {strText} {dexText} {conText} {intText} {wisText}
+                {chaText} {freeStatText}
+              </span>
+              <RacePointSelector />
+            </p>
+            <ProficiencyOptions />
+            <p>
+              <span>Size:</span> <span>{state.volume}</span>
+            </p>
+            <p>
+              <span>{state.feature1}</span>
+              <span>{state.feature1text}</span>
+            </p>
+            <p>
+              <span>{state.feature2}</span>
+              <span>{state.feature2text}</span>
+            </p>
+            <p>
+              <span>{state.feature3}</span>
+              <span>{state.feature3text}</span>
+            </p>
+            <p>
+              <span>{state.feature4}</span>
+              <span>{state.feature4text}</span>
+            </p>
+            <p>
+              <span>{state.feature5}</span>
+              <span>{state.feature5text}</span>
+            </p>
+            <p>
+              <span>{state.feature6}</span>
+              <span>{state.feature6text}</span>
+            </p>
+            <p>
+              <span>{state.feature7}</span>
+              <span>{state.feature7text}</span>
+            </p>
+            <p>
+              <span>{state.feature8}</span>
+              <span>{state.feature8text}</span>
+            </p>
+            <p>
+              <span>{state.feature9}</span>
+              <span>{state.feature9text}</span>
+            </p>
+            <p>
+              <span>{state.feature10}</span>
+              <span>{state.feature10text}</span>
+            </p>
+            <p>
+              <span>{state.feature11}</span>
+              <span>{state.feature11text}</span>
+            </p>
+          </div>
+        </>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

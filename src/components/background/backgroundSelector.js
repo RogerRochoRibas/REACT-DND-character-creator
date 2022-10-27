@@ -43,7 +43,7 @@ const BackgroundSelector = () => {
 
   return (
     <div>
-      <select
+      <h2>Background: </h2><select
         className="choseBackground"
         onChange={(e) => changeBackground(e.target.value)
         }

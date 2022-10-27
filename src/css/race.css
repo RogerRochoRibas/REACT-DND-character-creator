@@ -1,0 +1,8 @@
+.statSelector {
+    text-align:center;
+}
+
+select {
+    margin: 4px;
+    border: 1px solid black;
+}

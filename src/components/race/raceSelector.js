@@ -114,15 +114,18 @@ const RaceSelector = () => {
   ];
 
   return (
-    <select
-      onChange={(e) => {
-        changeChosenRace(e.target.value);
-      }}
-    >
-      {raceList.map((x, y) => (
-        <option key={y}>{x}</option>
-      ))}
-    </select>
+    <>
+      <h2>Race: </h2>
+      <select
+        onChange={(e) => {
+          changeChosenRace(e.target.value);
+        }}
+      >
+        {raceList.map((x, y) => (
+          <option key={y}>{x}</option>
+        ))}
+      </select>
+    </>
   );
 
   function changeChosenRace(race) {

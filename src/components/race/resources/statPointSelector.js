@@ -89,7 +89,7 @@ const RacePointSelector = () => {
     }
   }
   return (
-    <>
+    <div className="statSelector">
       {state.freeStat > 0 && (
         <>
           <select
@@ -129,7 +129,7 @@ const RacePointSelector = () => {
           </select>
         </>
       )}
-    </>
+    </div>
   );
 };
 export default RacePointSelector;

@@ -10,11 +10,11 @@ const App = () => (
   <AppProvider>
     <Router className="App">
       <Routes>
-        <Route path="/" element={<Class />}></Route>
-        <Route path="/stats" element={<Stats />}></Route>
-        <Route path="/race" element={<Race />}></Route>
-        <Route path="/background" element={<Background />}></Route>
-        <Route path="/charactersheet" element={<CharacterSheet />}></Route>
+        <Route path="/REACT-DND-character-creator" element={<Class />}></Route>
+        <Route path="/REACT-DND-character-creator/stats" element={<Stats />}></Route>
+        <Route path="/REACT-DND-character-creator/race" element={<Race />}></Route>
+        <Route path="/REACT-DND-character-creator/background" element={<Background />}></Route>
+        <Route path="/REACT-DND-character-creator/charactersheet" element={<CharacterSheet />}></Route>
       </Routes>
     </Router>
   </AppProvider>
