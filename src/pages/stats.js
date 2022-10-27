@@ -14,7 +14,6 @@ const Stats = () => {
         <RollForstats />
         <PointBuy />
         <SetManually />
-        <ChangePage />
     </div>
   );
 };
